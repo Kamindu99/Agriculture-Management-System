@@ -1,0 +1,2 @@
+# Agriculture-Management-System
+ Agriculture is the most important sector of the Sri Lankan economy. Arguably the most important aspect of agriculture is that it's the source of the world's food supply. No matter where or what you are eating, the ingredients in your meals came from somewhere. All roads lead to agriculture. So that through this project, my goal is to create a web application that will help agriculture in Sri Lanka. 
