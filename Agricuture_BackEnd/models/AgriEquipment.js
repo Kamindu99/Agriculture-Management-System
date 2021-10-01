@@ -21,3 +21,14 @@ const agriEquipmentSchema = new mongoose.Schema ({
 });
 
 module.exports = mongoose.model('agriequipment',agriEquipmentSchema);
+
+
+
+
+
+
+
+
+
+
+

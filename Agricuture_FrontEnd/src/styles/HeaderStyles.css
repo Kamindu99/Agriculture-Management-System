@@ -1,0 +1,82 @@
+.bodyheader {
+	padding-top:50px;
+}
+
+#masthead {
+	min-height:270px;
+	background-color:#000044;
+  	color:#aaaacc;
+}
+
+#masthead h2 {
+	font-size: 5px;
+	line-height: 1;
+}
+
+#masthead .well {
+	margin-top:13%;
+	background-color:#111155;
+  	border-color:#000033;
+}
+
+.icon-bar {
+	background-color:#fff;
+}
+
+@media screen and (min-width: 768px) {
+	#masthead h1 {
+		font-size: 80px;
+	}
+}
+
+.navbar-bright {
+	background-color:#111155;
+    color:#fff;
+}
+  
+.navbar-bright a, #masthead a, #masthead .lead {
+  	color:#aaaacc;
+}
+
+.navbar-bright li > a:hover {
+    background-color:#000033;
+}
+
+.affix-top,.affix{
+	position: static;
+}
+
+#sidebar li {
+    border-bottom:1px solid #eee;
+}  
+
+#sidebar li.active {
+  	border-right:5px solid rgb(12, 12, 12);
+}
+
+#mainCol h1 {
+	padding-top: 55px;
+    margin-top: -55px;
+}
+
+@media (min-width: 992px) {
+  #sidebar.affix-top {
+    position: static;
+  	margin-top:30px;
+  	width:228px;
+  }
+  
+  #sidebar.affix {
+    position: fixed;
+    top:70px;
+    width:228px;
+  }
+}
+
+.listitmes{
+	background-color: rgb(2, 63, 43);
+}
+.listitmes a{
+	text-decoration: none;
+	color: white;
+}

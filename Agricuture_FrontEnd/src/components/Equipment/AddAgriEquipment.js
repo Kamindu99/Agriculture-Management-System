@@ -42,11 +42,17 @@ const AddEquipment = ()=>{
        alert("New Equipment Added Successful")
    };
     return (
-      <div>
+      <div style={{marginInlineStart:"220px"}}>
       <div>
         <div className="container">
         <div className="w-75 mx-auto shadow p-5">
           <h2 className="text-center mb-4">Add Equipment</h2>
+
+
+
+
+
+          
           <form class="signup-form" onSubmit={changeOnClick} encType="multipart/form-data">
             <div className="form-group">
               <input

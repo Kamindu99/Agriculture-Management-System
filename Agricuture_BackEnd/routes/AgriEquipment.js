@@ -5,7 +5,7 @@ const router =express.Router();
 
 const storage=multer.diskStorage({
     destination:(req,file,callback)=>{
-        callback(null,"../Frontend/public/uploads");
+        callback(null,"../Agricuture_FrontEnd/public/uploads");
     },
     filename:(req,file,callback)=>{
         callback(null,file.originalname);
