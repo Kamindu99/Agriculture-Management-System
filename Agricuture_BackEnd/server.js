@@ -29,4 +29,7 @@ app.use("/agriequipment",equipmentRoute);
 const seedRoute=require('./routes/AgriSeed');
 app.use("/agriseed",seedRoute);
 
+const plantRoute=require('./routes/AgriPlant');
+app.use("/agriplant",plantRoute);
+
 
