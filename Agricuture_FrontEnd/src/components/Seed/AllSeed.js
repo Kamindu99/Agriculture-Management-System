@@ -124,6 +124,33 @@ export default class AgriSeed extends Component {
 </div>
 
 
+
+
+
+
+<Row xs={1} md={4} className="g-4" id="by" class="rounded">
+                {this.state.seeds.map((seed, idx) => (
+
+<div class="col">
+    <div class="card">
+      <img src={`/uploads/${seed.seedImage}`} class="card-img-top" alt="..."/>
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+
+ ))}
+ </Row>
+
+
+
+
+
+
+
+
 <br/><br/><br/><br/>
 
         </div>
