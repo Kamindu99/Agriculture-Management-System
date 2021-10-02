@@ -49,11 +49,12 @@ export default class AgroChemical extends Component {
 
 
     return(
-        <div style={{marginInlineStart:"220px" ,background:"#ccccff"}}>
+        <div className="pagemargin" style={{background:"#ccccff"}}>
 
 
 <div     class="d-flex flex-row align-items-center mb-2"
               style={{
+                
                 backgroundColor: "hsla(101, 27%, 53%, 0.27)",
                 paddingBottom: "5px",
                 paddingTop: "7px",
@@ -61,6 +62,7 @@ export default class AgroChemical extends Component {
               }}
             >
               <button
+              style={{marginLeft:"30px"}}
                     id="search-button"
                     type="button"
                     class="btn btn-primary"
@@ -89,27 +91,38 @@ export default class AgroChemical extends Component {
 
 
             
-            <div class="row">
-            <Row xs={1} md={1} className="g-4" id="by" class="rounded">
+           <br/> <br/>
+ 
+
+
+      <div class="container">
+      <Row xs={1} md={3} className="g-4" id="by" class="rounded">
                 {this.state.agrochemicals.map((eq, idx) => (
-  <div class="col-sm-4 col-md-3">
-    <div class="thumbnail">
-      <img style={{width:"100%",height:"200px"}} src={`/uploads/${eq.agrochemicalImage}`} alt="..."/>
-      <div class="caption">
-        <h3>{idx + 1}. &nbsp;{eq.agrochemicalName}</h3>
-        <p>There are many variations of passages of Lorem Ipsum available</p>
-        <p>Rs. {eq.price}</p>
-        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+    <div class="pt-1 ">
+      <div class="col-md-6 col-lg-12 pb-3">
+
+        <div class="card card-custom bg-white border-white border-0">
+          <div class="card-custom-img" ><img style={{height:"200px",width:"100%"}} src={`/uploads/${eq.agrochemicalImage}`}/></div>
+          <div class="card-custom-avatar">
+            <img class="img-fluid" src={`/uploads/${eq.agrochemicalImage}`}alt="Avatar" />
+          </div>
+          <div class="card-body" style={{overflowY: "auto"}}>
+            <h4 class="card-title">{idx + 1}. &nbsp;{eq.agrochemicalName}</h4>
+            <p class="card-text">Card has minimum height set but will <a href="https://getbootstrap.com/docs/4.0/components/card/#card-decks" target="_blank">card-decks</a> to align multiple cards nicely in a row.</p>
+          </div>
+          <div class="card-footer" style={{background: "inherit; border-color: inherit;"}}>
+            <a href="#" class="btn btn-primary">Option</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#" class="btn btn-outline-primary">Other option</a>
+          </div>
+        </div>
+
       </div>
+   
+  
     </div>
- 
+    ))}
+    </Row>
   </div>
-      ))}
-      </Row>
- 
-</div>
-
-
 
 
 

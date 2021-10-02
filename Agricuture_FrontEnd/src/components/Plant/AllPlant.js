@@ -49,7 +49,7 @@ export default class AgriPlant extends Component {
 
 
     return(
-        <div style={{marginInlineStart:"220px" ,background:"#ccccff"}}>
+        <div className="pagemargin">
 
 
 <div     class="d-flex flex-row align-items-center mb-2"
@@ -61,6 +61,7 @@ export default class AgriPlant extends Component {
               }}
             >
               <button
+                style={{marginLeft:"30px"}}
                     id="search-button"
                     type="button"
                     class="btn btn-primary"
@@ -89,39 +90,36 @@ export default class AgriPlant extends Component {
 
 
 
-<div class=" mt-5 mb-5" >
-    <div class="d-flex justify-content-center row" >
-        <div class="col-md-10" >
-        <Row xs={1} md={1} className="g-4" id="by" class="rounded">
+
+
+<div class="container bodyplant" style={{marginTop:"50px"}}>
+<Row xs={1} md={4} className="g-4" id="by" class="rounded">
                 {this.state.plants.map((eq, idx) => (
-            <div class="row p-2 bg-white border rounded " style={{background:"#e0e0d1",marginTop:"30px",marginLeft:"60px"}}>
-                <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" style={{padding:"10px",marginTop:"20px"}} src={`/uploads/${eq.plantImage}`}/></div>
-                <div class="col-md-6 mt-1">
-                    <h5>{idx + 1}. &nbsp;{eq.plantName}</h5>
-                    <div class="d-flex flex-row">
-                        <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
+        <div >
+            <div class="col-md-!">
+                <div class="card-sl">
+                    <div class="card-image">
+                        <img
+                           style={{height:"150px",width:"100%"}} src={`/uploads/${eq.plantImage}`}/>
                     </div>
-                    <div class="mt-1 mb-1 spec-1"><span>100% cotton</span><span class="dot"></span><span>Light weight</span><span class="dot"></span><span>Best finish<br/></span></div>
-                    <div class="mt-1 mb-1 spec-1"><span>Unique design</span><span class="dot"></span><span>For men</span><span class="dot"></span><span>Casual<br/></span></div>
-                    <p class="text-justify text-truncate para mb-0">There are many variations of passages of Lorem Ipsum available, <br/><br/></p>
-               
-                </div>
-                <div class="align-items-center align-content-center col-md-3 border-left mt-1">
-                    <div class="d-flex flex-row align-items-center">
-                        <h4 class="mr-1">Rs. {eq.price}</h4><span class="strike-text">$20.99</span>
+
+                    <a class="card-action planta" href="#"><i class="fa fa-heart"></i></a>
+                    <div class="card-heading">
+                    {idx + 1}. &nbsp;{eq.plantName}
                     </div>
-                    <h6 class="text-success">Free Delivery</h6>
-                    <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm " type="button" style={{width:"150px"}}>Details</button><br/><br/>
-                    <button class="btn btn-outline-primary btn-sm mt-2" type="button" style={{width:"150px"}}>Add to wishlist</button></div>
+                    <div class="card-text">
+                        Audi Q8 is a full-size luxury crossover SUV coupé made by Audi that was launched in 2018.
+                    </div>
+                    <div class="card-text">
+                    Rs. {eq.price}
+                    </div>
+                    <a href="#" class="card-button planta"> Purchase</a>
                 </div>
             </div>
-))}
-</Row>
-
-           
-        </div>
-    </div>
-</div>
+        </div> 
+        ))}
+        </Row>
+        </div> 
 
 
 <br/><br/><br/><br/>

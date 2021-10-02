@@ -42,7 +42,7 @@ const AddEquipment = ()=>{
        alert("New Equipment Added Successful")
    };
     return (
-      <div style={{marginInlineStart:"220px"}}>
+      <div className="pagemargin">
       <div>
         <div className="container">
         <div className="w-75 mx-auto shadow p-5">

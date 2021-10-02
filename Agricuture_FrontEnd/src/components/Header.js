@@ -39,19 +39,19 @@ const Homepage = ()=>{
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">About Us</a>
           </li>
 
          <li class="nav-item">
-            <a class="nav-link" href="#">Fruits</a>
+            <a class="nav-link" href="#">FeedBack</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Sea food</a>
+            <a class="nav-link" href="#">Inquiry</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Vegetables</a>
+            <a class="nav-link" href="#">Services</a>
           </li>
 
           <li class="nav-item">
@@ -59,7 +59,7 @@ const Homepage = ()=>{
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#">Conmany</a>
           </li>
         </ul>
       </div>
@@ -69,11 +69,9 @@ const Homepage = ()=>{
 
 
 <div class="sidebar-container">
-  <div class="sidebar-logo">
-    Project Name
-  </div>
+  
   <ul class="sidebar-navigation">
-    <li class="header">Navigation</li>
+    <li class="header">GreenWorld</li>
     <li>
       <a href="/">
         <i class="fa fa-home" aria-hidden="true"></i> Homepage
@@ -119,50 +117,16 @@ const Homepage = ()=>{
         <i class="fa fa-tachometer" aria-hidden="true"></i> About Us
       </a>
     </li>
-    <li>
-      <a href="#">
-        <i class="fa fa-tachometer" aria-hidden="true"></i> FeedBack
-      </a>
-    </li>
+   
     <li>
       <a href="#">
         <i class="fa fa-tachometer" aria-hidden="true"></i> Contact Us
       </a>
     </li>
-    <li>
-      <a href="#">
-        <i class="fa fa-tachometer" aria-hidden="true"></i> Inquiry
-      </a>
-    </li>
+    
   
   </ul>
 </div>
-
-<div class="content-container">
-
-  <div class="container-fluid">
-
-    <div class="jumbotron">
-      <h1>Navbar example</h1>
-      <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-      <p>To see the difference between static and fixed top navbars, just scroll.</p>
-      <p>
-        <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-      </p>
-    </div>
-
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
 
 
         </div>

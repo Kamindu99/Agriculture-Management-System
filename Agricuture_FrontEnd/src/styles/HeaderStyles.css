@@ -255,3 +255,9 @@ li {
 .content-container {
   padding-left: 220px;
 }
+
+.pagemargin{
+  margin-inline-start: 220px;
+  margin-top: 83px;
+  min-height: 800px;
+}
