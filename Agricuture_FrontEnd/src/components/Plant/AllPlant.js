@@ -52,7 +52,7 @@ export default class AgriPlant extends Component {
         <div className="pagemargin">
 
 
-<div     class="d-flex flex-row align-items-center mb-2"
+<div     class=""
               style={{
                 backgroundColor: "hsla(101, 27%, 53%, 0.27)",
                 paddingBottom: "5px",
@@ -68,12 +68,12 @@ export default class AgriPlant extends Component {
                   >
                     <i class="fas fa-search"></i><a style={{textDecoration:"none",color:"white"}} href="/agriplant/add">Add New Plant</a>
                   </button>
-           
+                  <div  style={{float:"right",marginRight:"20px"}}>
                     <input
                       id="search-input"
                       type="search"
                       id="form1"
-                      style={{width:"400px",marginInlineStart:"54%"}}
+                      style={{width:"400px"}}
                       placeholder="Search Plant"
                       onChange={this.handleSearchArea}
                     />
@@ -85,6 +85,7 @@ export default class AgriPlant extends Component {
                   >
                     <i class="fas fa-search"></i>
                   </button>
+                  </div>
             </div>
            
 
@@ -108,7 +109,7 @@ export default class AgriPlant extends Component {
                     {idx + 1}. &nbsp;{eq.plantName}
                     </div>
                     <div class="card-text">
-                        Audi Q8 is a full-size luxury crossover SUV coupé made by Audi that was launched in 2018.
+                        Agricultural development is one of the most powerful tools to end extreme poverty prosperity
                     </div>
                     <div class="card-text">
                     Rs. {eq.price}
@@ -122,7 +123,7 @@ export default class AgriPlant extends Component {
         </div> 
 
 
-<br/><br/><br/><br/>
+<br/><br/>
 
         </div>
    );

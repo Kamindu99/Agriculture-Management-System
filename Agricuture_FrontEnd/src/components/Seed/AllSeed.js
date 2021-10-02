@@ -52,7 +52,7 @@ export default class AgriSeed extends Component {
         <div className="pagemargin" style={{background:"#ccccff"}}>
 
 
-<div     class="d-flex flex-row align-items-center mb-2"
+<div     class=""
               style={{
                 backgroundColor: "hsla(101, 27%, 53%, 0.27)",
                 paddingBottom: "5px",
@@ -61,19 +61,19 @@ export default class AgriSeed extends Component {
               }}
             >
               <button
-              style={{marginTop:"20px",marginLeft:"20px"}}
+              style={{marginLeft:"30px"}}
                     id="search-button"
                     type="button"
                     class="btn btn-primary"
                   >
                     <i class="fas fa-search"></i><a style={{textDecoration:"none",color:"white"}} href="/agriseed/add">Add New Seed</a>
                   </button>
-           
+                  <div  style={{float:"right",marginRight:"20px"}}>
                     <input
                       id="search-input"
                       type="search"
                       id="form1"
-                      style={{width:"400px",marginInlineStart:"40%"}}
+                      style={{width:"400px"}}
                       placeholder="Search Seed"
                       onChange={this.handleSearchArea}
                     />
@@ -85,6 +85,7 @@ export default class AgriSeed extends Component {
                   >
                     <i class="fas fa-search"></i>
                   </button>
+                  </div>
             </div>
            
 
@@ -97,7 +98,7 @@ export default class AgriSeed extends Component {
         <div class="card rounded">
             <div class="card-image">
                 <span class="card-notify-badge">Low KMS</span>
-                <span class="card-notify-year">2018</span>
+                <span class="card-notify-year">2021</span>
                 <img class="img-fluid"  style={{width:"440px",height:"200px"}} src={`/uploads/${seed.seedImage}`} alt="Alternate Text" />
             </div>
             <div class="card-image-overlay m-auto">

@@ -44,7 +44,7 @@ const Homepage = ()=>{
   </button>
 </div>
 
-<p style={{margin:"20px",fontSize:"15px"}}><p>Agricultural development is one of the most powerful tools to end extreme poverty, boost shared prosperity and feed a projected 9.7 billion people by 2050. Growth in the agriculture sector is two to four times more effective in raising incomes among the poorest compared to other sectors. Analyses in 2016 found that 65 percent of poor working adults made a living through agriculture.</p>
+<p style={{margin:"20px",fontSize:"15px",textAlign:"justify"}}><p>Agricultural development is one of the most powerful tools to end extreme poverty, boost shared prosperity and feed a projected 9.7 billion people by 2050. Growth in the agriculture sector is two to four times more effective in raising incomes among the poorest compared to other sectors. Analyses in 2016 found that 65 percent of poor working adults made a living through agriculture.</p>
 
 <p>Agriculture is also crucial to economic growth: in 2018, it accounted for 4 percent of global gross domestic product (GDP) and in some developing countries, it can account for more than 25% of GDP. But agriculture-driven growth, poverty reduction, and food security are at risk: Climate change could cut crop yields, especially in the worldâ€™s most food-insecure regions. Agriculture, forestry and land use change are responsible for about 25 percent of greenhouse gas emissions. Mitigation in the agriculture sector is part of the solution to climate change.</p>
 

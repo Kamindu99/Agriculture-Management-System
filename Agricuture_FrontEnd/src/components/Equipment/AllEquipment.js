@@ -52,7 +52,7 @@ export default class AgriEquipment extends Component {
         <div className="pagemargin" style={{background:"#ccccff"}}>
 
 
-<div     class="d-flex flex-row align-items-center mb-2"
+<div     class=""
               style={{
                 backgroundColor: "hsla(101, 27%, 53%, 0.27)",
                 paddingBottom: "5px",
@@ -68,12 +68,12 @@ export default class AgriEquipment extends Component {
                   >
                     <i class="fas fa-search"></i><a style={{textDecoration:"none",color:"white"}} href="/agriequipment/add">Add New Equipmet</a>
                   </button>
-           
+                  <div  style={{float:"right",marginRight:"20px"}}>
                     <input
                       id="search-input"
                       type="search"
                       id="form1"
-                      style={{width:"400px",marginInlineStart:"54%"}}
+                      style={{width:"400px"}}
                       placeholder="Search Equipment"
                       onChange={this.handleSearchArea}
                     />
@@ -85,6 +85,7 @@ export default class AgriEquipment extends Component {
                   >
                     <i class="fas fa-search"></i>
                   </button>
+                  </div>
             </div>
            
 

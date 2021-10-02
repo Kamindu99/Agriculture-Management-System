@@ -12,6 +12,8 @@ const Homepage = ()=>{
           <div class="col-sm-12">
             <ul class="social-network">
                <p>  {new Date().getFullYear()} : {new Date().getMonth()} : {new Date().getDate()} - {new Date().toLocaleTimeString()}</p>
+               <li><a class="waves-effect waves-dark"></a></li>
+               <li><a class="waves-effect waves-dark"></a></li>
               <li><a class="waves-effect waves-dark" href="#"><i class="fa fa-facebook"></i></a></li>
               <li><a class="waves-effect waves-dark" href="#"><i class="fa fa-twitter"></i></a></li>
               <li><a class="waves-effect waves-dark" href="#"><i class="fa fa-linkedin"></i></a></li>

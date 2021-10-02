@@ -8,23 +8,17 @@ function Footer() {
 
       
         
-          <p className="">
-          <center>
-            <a href="#">
-              <i class="fab fa-facebook-f" style={{ color: "#adadad" }}></i>
-            </a>{" "}
+          <p>
+          <center  style={{fontSize:"20px"}}>
+          <a class="waves-effect waves-dark" href="#"><i class="fa fa-facebook"></i></a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="#">
-              <i class="fab fa-twitter" style={{ color: "#adadad" }}></i>
-            </a>{" "}
+            <a class="waves-effect waves-dark" href="#"><i class="fa fa-twitter"></i></a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="#">
-              <i class="fab fa-instagram" style={{ color: "#adadad" }}></i>
-            </a>{" "}</center>
+            <a class="waves-effect waves-dark" href="#"><i class="fa fa-instagram"></i></a></center>
           <br/>
            <hr/>
             <center><p>
-            &copy; {new Date().getFullYear()} Dream Travelers | All rights
+            &copy; {new Date().getFullYear()} Green World | All rights
             reserved | Terms Of Service | Privacy</p></center>
           </p>
        
