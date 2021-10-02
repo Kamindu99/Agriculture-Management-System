@@ -35,4 +35,7 @@ app.use("/agriplant",plantRoute);
 const fertilizerRoute=require('./routes/AgriFertilizer');
 app.use("/agrifertilizer",fertilizerRoute);
 
+const agrochemicalRoute=require('./routes/AgroChemical');
+app.use("/agrochemical",agrochemicalRoute);
+
 
