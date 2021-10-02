@@ -5,6 +5,8 @@ import AddAgriSeed from './components/Seed/AddAgriSeed';
 import AgriSeed from './components/Seed/AllSeed';
 import AddAgriPlant from './components/Plant/AddAgriPlant';
 import AgriPlant from './components/Plant/AllPlant';
+import AddAgriFertilizer from './components/Fertilizer/AddAgriFertilizer';
+import AgriFertilizer from './components/Fertilizer/AllFertilizer';
 
 import {BrowserRouter as Router, Route} from "react-router-dom"
 
@@ -20,6 +22,8 @@ function App() {
       <Route path="/agriseed/all" exact component = {AgriSeed}></Route>
       <Route path="/agriplant/add" exact component = {AddAgriPlant}></Route>
       <Route path="/agriplant/all" exact component = {AgriPlant}></Route>
+      <Route path="/agrifertilizer/add" exact component = {AddAgriFertilizer}></Route>
+      <Route path="/agrifertilizer/all" exact component = {AgriFertilizer}></Route>
 
     </div>
     </Router>

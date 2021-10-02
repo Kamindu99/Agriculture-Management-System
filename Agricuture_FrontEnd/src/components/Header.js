@@ -69,7 +69,7 @@ const Homepage = ()=>{
                   <li><a href="/agriseed/all">Seeds</a></li>
                   <li><a href="/agriplant/all">Plants</a></li>
                   <li><a href="/agriequipment/all">Equipments</a></li>
-                  <li><a href="#sec4">Fertilizer</a></li>
+                  <li><a href="/agrifertilizer/all">Fertilizer</a></li>
                   <li><a href="#sec4">Agrochemicals</a></li>
                   <li><a href="#sec4">Inquiry</a></li>
                   <li><a href="#sec4">My Account</a></li>

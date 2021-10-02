@@ -3,44 +3,44 @@ import axios from "axios";
 import { Row } from "react-bootstrap";
 import '../../styles/Equipment.css'
 
-export default class AgriPlant extends Component {
+export default class AgriFertilizer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          plants: [],
+          fertilizers: [],
         };
       }
     
       componentDidMount() {
-        this.retrievePlant();
+        this.retrievefertilizer();
       }
     
-      retrievePlant() {
-        axios.get("http://localhost:8000/agriplant").then((res) => {
+      retrievefertilizer() {
+        axios.get("http://localhost:8000/agrifertilizer").then((res) => {
           if (res.data.success) {
             this.setState({
-              plants: res.data.existingPlant,
+              fertilizers: res.data.existingFertilizer,
             });
           }
         });
       }
     
     
-      filterData(plants, searchkey) {
-        const result = plants.filter(
+      filterData(fertilizers, searchkey) {
+        const result = fertilizers.filter(
           (post) =>
-            post.plantName.toLowerCase().includes(searchkey) ||
-            post.plantName.toUpperCase().includes(searchkey)
+            post.fertilizerName.toLowerCase().includes(searchkey) ||
+            post.fertilizerName.toUpperCase().includes(searchkey)
         );
-        this.setState({ plants: result });
+        this.setState({ fertilizers: result });
       }
     
       handleSearchArea = (e) => {
         const searchkey = e.currentTarget.value;
     
-        axios.get("http://localhost:8000/agriplant").then((res) => {
+        axios.get("http://localhost:8000/agrifertilizer").then((res) => {
           if (res.data.success) {
-            this.filterData(res.data.existingPlant, searchkey);
+            this.filterData(res.data.existingFertilizer, searchkey);
           }
         });
       };
@@ -65,7 +65,7 @@ export default class AgriPlant extends Component {
                     type="button"
                     class="btn btn-primary"
                   >
-                    <i class="fas fa-search"></i><a style={{textDecoration:"none",color:"white"}} href="/agriplant/add">Add New Plant</a>
+                    <i class="fas fa-search"></i><a style={{textDecoration:"none",color:"white"}} href="/agrifertilizer/add">Add New Fertilizer</a>
                   </button>
            
                     <input
@@ -73,7 +73,7 @@ export default class AgriPlant extends Component {
                       type="search"
                       id="form1"
                       style={{width:"400px",marginInlineStart:"54%"}}
-                      placeholder="Search Plant"
+                      placeholder="Search Fertilizer"
                       onChange={this.handleSearchArea}
                     />
                  
@@ -93,11 +93,11 @@ export default class AgriPlant extends Component {
     <div class="d-flex justify-content-center row" >
         <div class="col-md-10" >
         <Row xs={1} md={1} className="g-4" id="by" class="rounded">
-                {this.state.plants.map((eq, idx) => (
+                {this.state.fertilizers.map((eq, idx) => (
             <div class="row p-2 bg-white border rounded " style={{background:"#e0e0d1",marginTop:"30px",marginLeft:"60px"}}>
-                <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" style={{padding:"10px",marginTop:"20px"}} src={`/uploads/${eq.plantImage}`}/></div>
+                <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" style={{padding:"10px",marginTop:"20px"}} src={`/uploads/${eq.fertilizerImage}`}/></div>
                 <div class="col-md-6 mt-1">
-                    <h5>{idx + 1}. &nbsp;{eq.plantName}</h5>
+                    <h5>{idx + 1}. &nbsp;{eq.fertilizerName}</h5>
                     <div class="d-flex flex-row">
                         <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
                     </div>
