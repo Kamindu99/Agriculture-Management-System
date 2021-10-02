@@ -32,4 +32,7 @@ app.use("/agriseed",seedRoute);
 const plantRoute=require('./routes/AgriPlant');
 app.use("/agriplant",plantRoute);
 
+const fertilizerRoute=require('./routes/AgriFertilizer');
+app.use("/agrifertilizer",fertilizerRoute);
+
 
