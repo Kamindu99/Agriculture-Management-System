@@ -66,7 +66,7 @@ const Homepage = ()=>{
               
               	<ul class="nav nav-stacked listitmes" id="sidebar">
                   <li ><a href="#sec0">Home</a></li>
-                  <li><a href="#sec1">Seeds</a></li>
+                  <li><a href="/agriseed/all">Seeds</a></li>
                   <li><a href="#sec2">Plants</a></li>
                   <li><a href="/agriequipment/all">Equipments</a></li>
                   <li><a href="#sec4">Fertilizer</a></li>

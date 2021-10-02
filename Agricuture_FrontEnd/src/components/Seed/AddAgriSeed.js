@@ -2,15 +2,15 @@ import React,{useState} from "react"
 import {useHistory} from 'react-router-dom';
 import axios from "axios";
 
-const AddEquipment = ()=>{
+const AddSeed = ()=>{
 
      let history = useHistory();
 
-     const[equipmentName,setName]=useState("");
+     const[seedName,setName]=useState("");
      const[description,setDescription]=useState("");
      const[price,setPrice]=useState("");
      const[,setMessage]=useState("");
-     const[equipmentImage,setFileName]=useState("");
+     const[seedImage,setFileName]=useState("");
    
      const onChangeFile= e=>{
          setFileName(e.target.files[0]);
@@ -20,10 +20,10 @@ const AddEquipment = ()=>{
        e.preventDefault();
    
        const formData=new FormData();
-       formData.append("equipmentName",equipmentName);
+       formData.append("seedName",seedName);
        formData.append("description",description);
        formData.append("price",price);
-       formData.append("equipmentImage",equipmentImage);
+       formData.append("seedImage",seedImage);
    
        setName("");
        setDescription("");
@@ -31,22 +31,22 @@ const AddEquipment = ()=>{
        
    
        axios
-       .post("http://localhost:8000/agriequipment/admin/add",formData)
+       .post("http://localhost:8000/agriseed/admin/add",formData)
        .then(
         (res)=>setMessage(res.data))
         
        .catch((err)=>{
            console.log(err);
        });
-       history.push("/agriequipment/all");
-       alert("New Equipment Added Successful")
+       history.push("/agriseed/all");
+       alert("New Seed Added Successful")
    };
     return (
       <div style={{marginInlineStart:"220px"}}>
       <div>
         <div className="container">
         <div className="w-75 mx-auto shadow p-5">
-          <h2 className="text-center mb-4">Add Equipment</h2>
+          <h2 className="text-center mb-4">Add Seed</h2>
 
 
 
@@ -59,8 +59,8 @@ const AddEquipment = ()=>{
                 type="text"
                 className="form-control form-control-lg"
                 placeholder="Enter Name"
-                name="equipmentName"
-                value={equipmentName}
+                name="seedName"
+                value={seedName}
                 onChange={(e)=>setName(e.target.value)}
                 required
               />
@@ -91,7 +91,7 @@ const AddEquipment = ()=>{
 
             <lable class="label-title"><b>Add an Image*</b>
             <div class="mb-3">
-            <input class="form-control" type="file" id="formFile" filename="equipmentImage" onChange={onChangeFile}/>
+            <input class="form-control" type="file" id="formFile" filename="seedImage" onChange={onChangeFile}/>
             </div></lable>
 
             <button className="btn btn-primary btn-block">Done</button>
@@ -103,4 +103,4 @@ const AddEquipment = ()=>{
     );
 };
 
-export default AddEquipment;
+export default AddSeed;
