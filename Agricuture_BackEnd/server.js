@@ -26,4 +26,7 @@ app.listen(PORT,()=>{
 const equipmentRoute=require('./routes/AgriEquipment');
 app.use("/agriequipment",equipmentRoute);
 
+const seedRoute=require('./routes/AgriSeed');
+app.use("/agriseed",seedRoute);
+
 
