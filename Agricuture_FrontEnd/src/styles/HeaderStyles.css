@@ -261,3 +261,17 @@ li {
   margin-top: 83px;
   min-height: 800px;
 }
+
+
+/*footer*/
+
+.mainfooter {
+  color: white;
+  background-color: rgb(77, 75, 75);
+  padding-top: 2em;
+  position: relative;
+  bottom: 0;
+  margin-inline-start: 220px;
+  padding-bottom: 5px;
+  
+}

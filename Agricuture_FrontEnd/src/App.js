@@ -1,4 +1,5 @@
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Home from './components/HomePage';
 import AddAgriEquipment from './components/Equipment/AddAgriEquipment';
 import AgriEquipment from './components/Equipment/AllEquipment';
@@ -30,7 +31,7 @@ function App() {
       <Route path="/agrifertilizer/all" exact component = {AgriFertilizer}></Route>
       <Route path="/agrochemical/add" exact component = {AddAgroChemical}></Route>
       <Route path="/agrochemical/all" exact component = {AgroChemical}></Route>
-
+      <Footer/>
     </div>
     </Router>
     
