@@ -44,15 +44,11 @@ const AddSeed = ()=>{
     return (
       <div className="pagemargin">
       <div>
+        <br/>
         <div className="container">
         <div className="w-75 mx-auto shadow p-5">
           <h2 className="text-center mb-4">Add Seed</h2>
 
-
-
-
-
-          
           <form class="signup-form" onSubmit={changeOnClick} encType="multipart/form-data">
             <div className="form-group">
               <input
@@ -99,6 +95,7 @@ const AddSeed = ()=>{
         </div>
       </div>
       </div>
+      <br/>
       </div>
     );
 };

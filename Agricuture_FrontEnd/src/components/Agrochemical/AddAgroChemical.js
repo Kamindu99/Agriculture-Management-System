@@ -1,8 +1,11 @@
 import React,{useState} from "react"
 import {useHistory} from 'react-router-dom';
 import axios from "axios";
+import { Form,Button,Col,Row,InputGroup } from "react-bootstrap";
 
 const AddAgroChemical = ()=>{
+
+     const [validated, setValidated] = useState(false);
 
      let history = useHistory();
 
@@ -17,6 +20,13 @@ const AddAgroChemical = ()=>{
      }
    
    const changeOnClick =(e)=>{
+    const form = e.currentTarget;
+    if (form.checkValidity() === false) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+else{
        e.preventDefault();
    
        const formData=new FormData();
@@ -40,10 +50,13 @@ const AddAgroChemical = ()=>{
        });
        history.push("/agrochemical/all");
        alert("New Agrochemical Added Successful")
+      }
+      setValidated(true);
    };
     return (
       <div className="pagemargin">
       <div>
+      <br/>
         <div className="container">
         <div className="w-75 mx-auto shadow p-5">
           <h2 className="text-center mb-4">Add Agrochemical</h2>
@@ -53,8 +66,8 @@ const AddAgroChemical = ()=>{
 
 
           
-          <form class="signup-form" onSubmit={changeOnClick} encType="multipart/form-data">
-            <div className="form-group">
+          <form noValidate validated={validated} class="signup-form" onSubmit={changeOnClick} encType="multipart/form-data">
+            <div className="form-group" controlId="validationCustom01">
               <input
                 type="text"
                 className="form-control form-control-lg"
@@ -64,6 +77,9 @@ const AddAgroChemical = ()=>{
                 onChange={(e)=>setName(e.target.value)}
                 required
               />
+               <Form.Control.Feedback type="invalid">
+              Please provide a valid name. 
+            </Form.Control.Feedback>
             </div>
             <div className="form-group">
               <textarea
@@ -99,6 +115,7 @@ const AddAgroChemical = ()=>{
         </div>
       </div>
       </div>
+      <br/>
       </div>
     );
 };

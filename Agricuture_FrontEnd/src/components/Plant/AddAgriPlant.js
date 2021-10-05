@@ -99,6 +99,7 @@ const AddPlant = ()=>{
         </div>
       </div>
       </div>
+      <br/>
       </div>
     );
 };

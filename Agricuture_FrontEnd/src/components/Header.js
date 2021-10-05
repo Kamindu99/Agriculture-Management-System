@@ -27,7 +27,7 @@ const Homepage = ()=>{
   </header>
   <nav class="navbar navbar-expand-lg navbar-dark mx-background-top-linear">
     <div class="container">
-      <a class="navbar-brand" href="index.html" style={{textTransform: "uppercase"}}>Green World</a>
+      <a class="navbar-brand" href="index.html" style={{textTransform: "uppercase"}}>Green World Agriculture (pvt)</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -42,7 +42,7 @@ const Homepage = ()=>{
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="/aboutus">About Us</a>
           </li>
 
          <li class="nav-item">
@@ -74,7 +74,7 @@ const Homepage = ()=>{
 <div class="sidebar-container">
   
   <ul class="sidebar-navigation">
-    <li class="header">GreenWorld</li>
+    <li class="header">Green World</li>
     <li>
       <a href="/">
         <i class="fa fa-home" aria-hidden="true"></i> Homepage
@@ -116,7 +116,7 @@ const Homepage = ()=>{
 
     <li class="header">For You</li>
     <li>
-      <a href="#">
+      <a href="/aboutus">
         <i class="fa fa-tachometer" aria-hidden="true"></i> About Us
       </a>
     </li>

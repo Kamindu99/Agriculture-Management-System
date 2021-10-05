@@ -117,7 +117,7 @@ export default class AgriSeed extends Component {
 ))}
 </Row>
 
-
+<br/>
 
 </div>
         </div>

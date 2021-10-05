@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Row } from "react-bootstrap";
 import '../../styles/Equipment.css'
+import PlantDetails from "./PlantDetails";
 
 export default class AgriPlant extends Component {
     constructor(props) {
@@ -44,6 +45,8 @@ export default class AgriPlant extends Component {
           }
         });
       };
+
+    
     
       render() {
 
@@ -115,6 +118,20 @@ export default class AgriPlant extends Component {
                     Rs. {eq.price}
                     </div>
                     <a href="#" class="card-button planta"> Purchase</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 </div>
             </div>
         </div> 

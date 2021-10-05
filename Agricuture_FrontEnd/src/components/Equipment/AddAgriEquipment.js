@@ -44,6 +44,7 @@ const AddEquipment = ()=>{
     return (
       <div className="pagemargin">
       <div>
+      <br/>
         <div className="container">
         <div className="w-75 mx-auto shadow p-5">
           <h2 className="text-center mb-4">Add Equipment</h2>
@@ -99,6 +100,7 @@ const AddEquipment = ()=>{
         </div>
       </div>
       </div>
+      <br/>
       </div>
     );
 };

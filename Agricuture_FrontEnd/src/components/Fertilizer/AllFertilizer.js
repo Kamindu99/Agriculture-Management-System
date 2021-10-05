@@ -106,6 +106,7 @@ export default class AgriFertilizer extends Component {
       </div>
 ))}
 </Row>
+<br/><br/>
 </div>
         </div>
    );

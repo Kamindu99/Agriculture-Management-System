@@ -44,6 +44,7 @@ const AddFertilizer = ()=>{
     return (
       <div className="pagemargin">
       <div>
+      <br/>
         <div className="container">
         <div className="w-75 mx-auto shadow p-5">
           <h2 className="text-center mb-4">Add Fertilizer</h2>
@@ -99,6 +100,7 @@ const AddFertilizer = ()=>{
         </div>
       </div>
       </div>
+      <br/>
       </div>
     );
 };

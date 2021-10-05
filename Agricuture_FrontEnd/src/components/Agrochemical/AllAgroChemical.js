@@ -95,7 +95,6 @@ export default class AgroChemical extends Component {
            <br/> <br/>
  
 
-
       <div class="container">
       <Row xs={1} md={3} className="g-4" id="by" class="rounded">
                 {this.state.agrochemicals.map((eq, idx) => (
@@ -125,25 +124,7 @@ export default class AgroChemical extends Component {
     </Row>
   </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br/><br/><br/><br/>
+<br/><br/>
 
         </div>
    );
