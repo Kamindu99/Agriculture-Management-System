@@ -14,6 +14,7 @@ import AddAgroChemical from './components/Agrochemical/AddAgroChemical';
 import AgroChemical from './components/Agrochemical/AllAgroChemical';
 import PlantDetails from './components/Plant/PlantDetails';
 import FormExample from './components/AddItem';
+import ContactUs from './components/Contactus';
 
 import {BrowserRouter as Router, Route} from "react-router-dom"
 
@@ -37,6 +38,7 @@ function App() {
       <Route path="/agrochemical/all" exact component = {AgroChemical}></Route>
       <Route path="/plantdetails/:id" exact component = {PlantDetails}></Route>
       <Route path="/test" exact component = {FormExample}></Route>
+      <Route path="/contactus" exact component = {ContactUs}></Route>
       <Footer/>
     </div>
     </Router>

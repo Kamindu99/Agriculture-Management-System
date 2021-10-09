@@ -38,4 +38,8 @@ app.use("/agrifertilizer",fertilizerRoute);
 const agrochemicalRoute=require('./routes/AgroChemical');
 app.use("/agrochemical",agrochemicalRoute);
 
+const contactusRoute=require('./routes/Contactus');
+app.use("/contactus",contactusRoute);
+
+
 

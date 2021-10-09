@@ -122,7 +122,7 @@ const Homepage = ()=>{
     </li>
    
     <li>
-      <a href="#">
+      <a href="/contactus">
         <i class="fa fa-tachometer" aria-hidden="true"></i> Contact Us
       </a>
     </li>
