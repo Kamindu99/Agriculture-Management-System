@@ -15,9 +15,9 @@ import AgroChemical from './components/Agrochemical/AllAgroChemical';
 import PlantDetails from './components/Plant/PlantDetails';
 import FormExample from './components/AddItem';
 import ContactUs from './components/Contactus';
+import FeedBack from './components/FeedBack';
 
 import {BrowserRouter as Router, Route} from "react-router-dom"
-
 
 function App() {
   return (
@@ -39,6 +39,7 @@ function App() {
       <Route path="/plantdetails/:id" exact component = {PlantDetails}></Route>
       <Route path="/test" exact component = {FormExample}></Route>
       <Route path="/contactus" exact component = {ContactUs}></Route>
+      <Route path="/feedback" exact component = {FeedBack}></Route>
       <Footer/>
     </div>
     </Router>

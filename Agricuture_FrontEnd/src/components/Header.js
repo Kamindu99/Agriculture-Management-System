@@ -46,7 +46,7 @@ const Homepage = ()=>{
           </li>
 
          <li class="nav-item">
-            <a class="nav-link" href="#">FeedBack</a>
+            <a class="nav-link" href="/feedback">FeedBack</a>
           </li>
 
           <li class="nav-item">

@@ -41,5 +41,8 @@ app.use("/agrochemical",agrochemicalRoute);
 const contactusRoute=require('./routes/Contactus');
 app.use("/contactus",contactusRoute);
 
+const feedbackRoute=require('./routes/FeedBack');
+app.use("/feedback",feedbackRoute);
+
 
 
