@@ -1,8 +1,12 @@
 import React from "react"
 import '../styles/Homepage.css'
+import Header from './Header';
+import Footer from './Footer';
 
 const Homepage = ()=>{
     return(
+      <div>
+        <Header/>
         <div className="pagemargin">
             <br/>
 <div id="carouselExampleDark" class="carousel  slide carousel-fade" data-bs-ride="carousel" style={{margin:"20px"}}>
@@ -52,6 +56,8 @@ const Homepage = ()=>{
 
 <p>Risks associated with poor diets are also the leading cause of death worldwide. Millions of people are either not eating enough or eating the wrong types of food, resulting in a double burden of malnutrition that can lead to illnesses and health crises. A 2020 report found that nearly 690 million peopleâ€”or 8.9 percent of the global populationâ€”are hungry, up by nearly 60 million in five years. Food insecurity can worsen diet quality and increase the risk of various forms of malnutrition, potentially leading to undernutrition as well as people being overweight and obese. The cost of healthy diets is unaffordable for more than 3 billion people in the world.</p></p>
 
+        </div>
+        <Footer/>
         </div>
     )
 }

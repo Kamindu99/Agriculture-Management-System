@@ -2,10 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Row } from "react-bootstrap";
 import '../../styles/Equipment.css'
-import Header from '../Header';
-import Footer from '../Footer';
 
-export default class AgroChemical extends Component {
+export default class AllAgroChemicalAdmin extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -52,8 +50,7 @@ export default class AgroChemical extends Component {
 
     return(
       <div>
-        <Header/>
-        <div className="pagemargin" style={{background:"#ccccff"}}>
+        <div>
 
 
 <div     class=""
@@ -99,38 +96,32 @@ export default class AgroChemical extends Component {
            <br/> <br/>
  
 
-      <div class="container">
-      <Row xs={1} md={3} className="g-4" id="by" class="rounded">
-                {this.state.agrochemicals.map((eq, idx) => (
-    <div class="pt-1 ">
-      <div class="col-md-6 col-lg-12 pb-3">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Chemical ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {this.state.agrochemicals.map((eq, idx) => (
+    <tr>
+      <td>Ch_0{idx + 1}</td>
+      <td>{eq.agrochemicalName}</td>
+      <td>{eq.price}</td>
+      <td><button>Edit</button></td>
+    </tr>
+  ))}
+  </tbody>
+</table>
 
-        <div class="card card-custom bg-white border-white border-0">
-          <div class="card-custom-img" ><img style={{height:"200px",width:"100%"}} src={`/uploads/${eq.agrochemicalImage}`}/></div>
-          <div class="card-custom-avatar">
-            <img class="img-fluid" src={`/uploads/${eq.agrochemicalImage}`}alt="Avatar" />
-          </div>
-          <div class="card-body" style={{overflowY: "auto"}}>
-            <h4 class="card-title">{idx + 1}. &nbsp;{eq.agrochemicalName}</h4>
-            <p class="card-text">Card has minimum height set but will <a href="https://getbootstrap.com/docs/4.0/components/card/#card-decks" target="_blank">card-decks</a> to align multiple cards nicely in a row.</p>
-          </div>
-          <div class="card-footer" style={{background: "inherit; border-color: inherit;"}}>
-            <a href="#" class="btn btn-primary">Option</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="#" class="btn btn-outline-primary">Other option</a>
-          </div>
-        </div>
 
-      </div>
-   
-  
-    </div>
-    ))}
-    </Row>
-  </div>
+
 
 <br/><br/>
 </div>
-<Footer/>
         </div>
    );
 }

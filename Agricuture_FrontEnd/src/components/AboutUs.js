@@ -1,9 +1,12 @@
 import React from "react";
 import "../styles/Homepage.css";
+import Header from './Header';
+import Footer from './Footer';
 
 const Aboutus = () => {
   return (
     <div>
+      <Header/>
       <div className="pagemargin  ">
         <body>
           <div class="team-boxed ">
@@ -48,7 +51,9 @@ const Aboutus = () => {
           </div>
         </body>
       </div>
+      <Footer/>
     </div>
+    
   );
 };
 

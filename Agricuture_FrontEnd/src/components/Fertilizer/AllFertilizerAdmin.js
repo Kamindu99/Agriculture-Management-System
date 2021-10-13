@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Row } from "react-bootstrap";
 import '../../styles/Equipment.css'
-import Header from '../Header';
-import Footer from '../Footer';
 
-export default class AgriFertilizer extends Component {
+export default class AllFertilizerAdmin extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -52,8 +49,7 @@ export default class AgriFertilizer extends Component {
 
     return(
       <div>
-        <Header/>
-        <div className="pagemargin" style={{background:"#ccccff"}}>
+        <div>
 
 
 <div     class=""
@@ -93,27 +89,31 @@ export default class AgriFertilizer extends Component {
             </div>
            
 
+            <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Chemical ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {this.state.fertilizers.map((fertilizer, idx) => (
+    <tr>
+      <td>Ch_0{idx + 1}</td>
+      <td>{fertilizer.fertilizerName}</td>
+      <td>{fertilizer.price}</td>
+      <td><button>Edit</button></td>
+    </tr>
+  ))}
+  </tbody>
+</table>
 
-<div class="container">
-    <br/>
-<Row xs={1} md={1} className="g-4" id="by" class="rounded">
-                {this.state.fertilizers.map((fertilizer, idx) => (
-<div class="col-md-4">
-         <div class="card">
-            <img class="card-img-top" style={{width:"100%",height:"200px"}} src={`/uploads/${fertilizer.fertilizerImage}`}  alt="Card image cap"/>
-            <div class="card-body">
-               <h5 class="card-title border-bottom pb-3">{idx + 1}. &nbsp;{fertilizer.fertilizerName}<a  class="float-right d-inline-flex share"><i class="fas fa-share-alt text-primary"></i></a></h5>
-               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-               <a href="#" class="btn btn-primary float-right">Read more <i class="fas fa-angle-double-right"></i></a>
-            </div>
-         </div>
-      </div>
-))}
-</Row>
-<br/><br/>
+
+
 </div>
-</div>
-<Footer/>
+
         </div>
    );
 }

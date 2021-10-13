@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Row } from "react-bootstrap";
 import '../../styles/Equipment.css'
-import Header from '../Header';
-import Footer from '../Footer';
 
-export default class AgriSeed extends Component {
+export default class AllSeedAdmin extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -52,8 +49,7 @@ export default class AgriSeed extends Component {
 
     return(
       <div>
-        <Header/>
-        <div className="pagemargin" style={{background:"#ccccff"}}>
+        <div>
 
 
 <div     class=""
@@ -94,38 +90,32 @@ export default class AgriSeed extends Component {
            
 
 
-<div class="container">
-    <br/>
-<Row xs={1} md={1} className="g-4" id="by" class="rounded">
-                {this.state.seeds.map((seed, idx) => (
-<div class=" col-md-4"  id="ads">
-        <div class="card rounded">
-            <div class="card-image">
-                <span class="card-notify-badge">Low KMS</span>
-                <span class="card-notify-year">2021</span>
-                <img class="img-fluid"  style={{width:"440px",height:"200px"}} src={`/uploads/${seed.seedImage}`} alt="Alternate Text" />
-            </div>
-            <div class="card-image-overlay m-auto">
-                <span class="card-detail-badge">Used</span>
-                <span class="card-detail-badge">$28,000.00</span>
-                <span class="card-detail-badge">13000 Kms</span>
-            </div>
-            <div class="card-body text-center">
-                <div class="ad-title m-auto">
-                    <h5>{idx + 1}. &nbsp;{seed.seedName}</h5>
-                </div>
-                <a class="ad-btn" href="#">View</a>
-            </div>
-        </div>
-    </div>
-))}
-</Row>
+            <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Equipment ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {this.state.seeds.map((seed, idx) => (
+    <tr>
+      <td>Eq_0{idx + 1}</td>
+      <td>{seed.seedName}</td>
+      <td>{seed.price}</td>
+      <td><button>Edit</button></td>
+    </tr>
+  ))}
+  </tbody>
+</table>
+
 
 <br/>
 
+
 </div>
-</div>
-<Footer/>
         </div>
    );
 }

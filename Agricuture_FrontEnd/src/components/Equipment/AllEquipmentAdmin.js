@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Row } from "react-bootstrap";
 import '../../styles/Equipment.css'
-import Header from '../Header';
-import Footer from '../Footer';
 
-export default class AgriEquipment extends Component {
+export default class AllEquipmentAdmin extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -52,8 +49,7 @@ export default class AgriEquipment extends Component {
 
     return(
       <div>
-        <Header/>
-        <div className="pagemargin" style={{background:"#ccccff"}}>
+        <div>
 
 
 <div     class=""
@@ -95,44 +91,30 @@ export default class AgriEquipment extends Component {
 
 
 
-<div class=" mt-5 mb-5" >
-    <div class="d-flex justify-content-center" >
-        <div class="col-md-10" >
-        <Row xs={1} md={1} className="g-4" id="by" class="rounded">
-                {this.state.equipments.map((eq, idx) => (
-            <div class="row p-2 bg-white border rounded " style={{background:"#e0e0d1",marginTop:"30px"}}>
-                <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" style={{height:'130px',marginTop:"14px"}} src={`/uploads/${eq.equipmentImage}`}/></div>
-                <div class="col-md-6 mt-1">
-                    <h5>{idx + 1}. &nbsp;{eq.equipmentName}</h5>
-                    <div class="d-flex flex-row">
-                        <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
-                    </div>
-                    <div class="mt-1 mb-1 spec-1"><span>100% Perfect</span><span class="dot"></span><span>Light weight</span><span class="dot"></span><span>Best finish<br/></span></div>
-                    <div class="mt-1 mb-1 spec-1"><span>Unique design</span><span class="dot"></span><span>For Agry</span><span class="dot"></span><span>Suberb<br/></span></div>
-                    <p class="text-justify text-truncate para mb-0">There are many variations of passages of Lorem Ipsum available, <br/><br/></p>
-               
-                </div>
-                <div class="align-items-center align-content-center col-md-3 border-left mt-1">
-                    <div class="d-flex flex-row align-items-center">
-                        <h4 class="mr-1">Rs. {eq.price}</h4><span class="strike-text">$20.99</span>
-                    </div>
-                    <h6 class="text-success">Free Delivery</h6>
-                    <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm " type="button" >Details</button>
-                    <button class="btn btn-outline-primary btn-sm mt-2" type="button">Add to wishlist</button></div>
-                </div>
-            </div>
-))}
-</Row>
-
-           
-        </div>
-    </div>
-</div>
-
+            <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Equipment ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {this.state.equipments.map((eq, idx) => (
+    <tr>
+      <td>Eq_0{idx + 1}</td>
+      <td>{eq.equipmentName}</td>
+      <td>{eq.price}</td>
+      <td><button>Edit</button></td>
+    </tr>
+  ))}
+  </tbody>
+</table>
+     
 
 <br/><br/>
 </div>
-<Footer/>
         </div>
    );
 }

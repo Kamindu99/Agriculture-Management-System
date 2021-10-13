@@ -1,12 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Row } from "react-bootstrap";
 import '../../styles/Equipment.css'
-import PlantDetails from "./PlantDetails";
-import Header from '../Header';
-import Footer from '../Footer';
 
-export default class AgriPlant extends Component {
+export default class AllPlantAdmin extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -55,8 +51,7 @@ export default class AgriPlant extends Component {
 
     return(
       <div>
-        <Header/>
-        <div className="pagemargin">
+        <div>
 
 
 <div     class=""
@@ -97,56 +92,30 @@ export default class AgriPlant extends Component {
            
 
 
-
-
-
-<div class="container bodyplant" style={{marginTop:"50px"}}>
-<Row xs={1} md={4} className="g-4" id="by" class="rounded">
-                {this.state.plants.map((eq, idx) => (
-        <div >
-            <div class="col-md-!">
-                <div class="card-sl">
-                    <div class="card-image">
-                        <img
-                           style={{height:"150px",width:"100%"}} src={`/uploads/${eq.plantImage}`}/>
-                    </div>
-
-                    <a class="card-action planta" href="#"><i class="fa fa-heart"></i></a>
-                    <div class="card-heading">
-                    {idx + 1}. &nbsp;{eq.plantName}
-                    </div>
-                    <div class="card-text">
-                        Agricultural development is one of the most powerful tools to end extreme poverty prosperity
-                    </div>
-                    <div class="card-text">
-                    Rs. {eq.price}
-                    </div>
-                    <a href="#" class="card-button planta"> Purchase</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                </div>
-            </div>
-        </div> 
-        ))}
-        </Row>
-        </div> 
-
-
+            <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Equipment ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {this.state.plants.map((eq, idx) => (
+    <tr>
+      <td>Eq_0{idx + 1}</td>
+      <td>{eq.plantName}</td>
+      <td>{eq.price}</td>
+      <td><button>Edit</button></td>
+    </tr>
+  ))}
+  </tbody>
+</table>
+     
+   
 <br/><br/>
 </div>
-<Footer/>
         </div>
    );
 }

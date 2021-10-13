@@ -1,7 +1,8 @@
 import React, { useReducer, useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
-
+import Header from './Header';
+import Footer from './Footer';
 const FeedBack = () => {
   let history = useHistory();
 
@@ -23,6 +24,7 @@ const FeedBack = () => {
 
   return (
     <div>
+        <Header/>
       <div className="pagemargin">
         <div className="">
           <div class="container">
@@ -84,6 +86,7 @@ const FeedBack = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };
