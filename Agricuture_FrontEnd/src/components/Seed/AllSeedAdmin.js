@@ -105,7 +105,7 @@ export default class AllSeedAdmin extends Component {
       <td>Eq_0{idx + 1}</td>
       <td>{seed.seedName}</td>
       <td>{seed.price}</td>
-      <td><button>Edit</button></td>
+      <td><button><a href={`/agriseed/edit/${seed._id}`}>Edit</a></button></td>
     </tr>
   ))}
   </tbody>

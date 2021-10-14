@@ -104,7 +104,7 @@ export default class AllFertilizerAdmin extends Component {
       <td>Ch_0{idx + 1}</td>
       <td>{fertilizer.fertilizerName}</td>
       <td>{fertilizer.price}</td>
-      <td><button>Edit</button></td>
+      <td><button><a href={`/agrifertilizer/edit/${fertilizer._id}`}>Edit</a></button></td>
     </tr>
   ))}
   </tbody>

@@ -24,6 +24,9 @@ import AllSeedAdmin from './components/Seed/AllSeedAdmin';
 import {BrowserRouter as Router, Route} from "react-router-dom"
 import EditAgroChemical from './components/Agrochemical/EditAgroChemical';
 import EditAgriEquipment from './components/Equipment/EditAgriEquipment';
+import EditAgriSeed from './components/Seed/EditAgriSeed';
+import EditAgriPlant from './components/Plant/EditAgriPlant';
+import EditAgriFertilizer from './components/Fertilizer/EditAgriFertilizer';
 
 function App() {
   return (
@@ -37,15 +40,15 @@ function App() {
       <Route path="/agriequipment/all" exact component = {AgriEquipment}></Route>
       <Route path="/admin/agriequipment/all" exact component = {AllEquipmentAdmin}></Route>
       <Route path="/agriseed/add" exact component = {AddAgriSeed}></Route>
-      <Route path="/agriseed/edit/:id" exact component = {AddAgriSeed}></Route>
+      <Route path="/agriseed/edit/:id" exact component = {EditAgriSeed}></Route>
       <Route path="/agriseed/all" exact component = {AgriSeed}></Route>
       <Route path="/admin/agriseed/all" exact component = {AllSeedAdmin}></Route>
       <Route path="/agriplant/add" exact component = {AddAgriPlant}></Route>
-      <Route path="/agriplant/edit/:id" exact component = {AddAgriPlant}></Route>
+      <Route path="/agriplant/edit/:id" exact component = {EditAgriPlant}></Route>
       <Route path="/agriplant/all" exact component = {AgriPlant}></Route>
       <Route path="/admin/agriplant/all" exact component = {AllPlantAdmin}></Route>
       <Route path="/agrifertilizer/add" exact component = {AddAgriFertilizer}></Route>
-      <Route path="/agrifertilizer/edit/:id" exact component = {AddAgriFertilizer}></Route>
+      <Route path="/agrifertilizer/edit/:id" exact component = {EditAgriFertilizer}></Route>
       <Route path="/agrifertilizer/all" exact component = {AgriFertilizer}></Route>
       <Route path="/admin/agrifertilizer/all" exact component = {AllFertilizerAdmin}></Route>
       <Route path="/agrochemical/add" exact component = {AddAgroChemical}></Route>

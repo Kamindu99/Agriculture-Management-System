@@ -107,7 +107,7 @@ export default class AllPlantAdmin extends Component {
       <td>Eq_0{idx + 1}</td>
       <td>{eq.plantName}</td>
       <td>{eq.price}</td>
-      <td><button>Edit</button></td>
+      <td><button><a href={`/agriplant/edit/${eq._id}`}>Edit</a></button></td>
     </tr>
   ))}
   </tbody>
