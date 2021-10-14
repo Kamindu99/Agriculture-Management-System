@@ -1,25 +1,20 @@
-import React,{useState} from "react"
+import React,{useState,useEffect} from "react"
 import {useHistory} from 'react-router-dom';
 import axios from "axios";
 import { Form } from "react-bootstrap";
 
-const AddPlant = ()=>{
+const EditAgriEquipment = (props)=>{
 
      let history = useHistory();
+     const id = props.match.params.id;
      const [validated, setValidated] = useState(false);
 
-     const[plantName,setName]=useState("");
+     const[equipmentName,setName]=useState("");
      const[description,setDescription]=useState("");
      const[price,setPrice]=useState("");
      const[,setMessage]=useState("");
-     const[plantImage,setFileName]=useState("");
-   
-     const onChangeFile= e=>{
-         setFileName(e.target.files[0]);
-     }
    
    const changeOnClick =(e)=>{
-
     const form = e.currentTarget;
     if (form.checkValidity() === false) {
       e.preventDefault();
@@ -30,10 +25,9 @@ else{
        e.preventDefault();
    
        const formData=new FormData();
-       formData.append("plantName",plantName);
+       formData.append("equipmentName",equipmentName);
        formData.append("description",description);
        formData.append("price",price);
-       formData.append("plantImage",plantImage);
    
        setName("");
        setDescription("");
@@ -41,38 +35,55 @@ else{
        
    
        axios
-       .post("http://localhost:8000/agriplant/admin/add",formData)
+       .put(`http://localhost:8000/agriequipment/admin/update/${id}`,formData)
        .then(
         (res)=>setMessage(res.data))
         
        .catch((err)=>{
            console.log(err);
        });
-       history.push("/agriplant/all");
-       alert("New Plant Added Successful")
+       history.push("/admin/agriequipment/all");
+       alert("Equipment Details Edit Successful")
       }
       setValidated(true);
    };
+
+   useEffect(() => {
+    axios
+      .get(
+        `http://localhost:8000/agriequipment/admin/${props.match.params.id}`
+      )
+      .then((res) =>
+       [
+        setName(res.data.equipment.equipmentName),
+        setPrice(res.data.equipment.price),
+        setDescription(res.data.equipment.description)
+       
+      ])
+      .catch((error) => console.log(error));
+  }, []);
+
     return (
-      <div className="pagemargin">
       <div>
+      <div>
+      <br/>
         <div className="container">
         <div className="w-75 mx-auto shadow p-5">
-          <h2 className="text-center mb-4">Add Plant</h2>
+          <h2 className="text-center mb-4">Edit Equipment</h2>
 
 
 
 
 
           
-          <Form noValidate validated={validated} class="signup-form" onSubmit={changeOnClick} encType="multipart/form-data">
+          <Form noValidate validated={validated}  class="signup-form" onSubmit={changeOnClick} encType="multipart/form-data">
             <div className="form-group">
               <input
                 type="text"
                 className="form-control form-control-lg"
                 placeholder="Enter Name"
-                name="plantName"
-                value={plantName}
+                name="equipmentName"
+                value={equipmentName}
                 onChange={(e)=>setName(e.target.value)}
                 required
               />
@@ -92,7 +103,7 @@ else{
                 required
               />
               <Form.Control.Feedback type="invalid">
-              Please provide Description.
+              Please provide Description. 
             </Form.Control.Feedback>
             </div>
             <div className="form-group">
@@ -112,10 +123,7 @@ else{
 
             <lable class="label-title"><b>Add an Image*</b>
             <div class="mb-3">
-            <input class="form-control" required type="file" id="formFile" filename="plantImage" onChange={onChangeFile}/>
-            <Form.Control.Feedback type="invalid">
-              Please provide Image. 
-            </Form.Control.Feedback>
+            <input class="form-control" type="file" id="formFile"/>
             </div></lable>
 
             <button className="btn btn-primary btn-block">Done</button>
@@ -128,4 +136,4 @@ else{
     );
 };
 
-export default AddPlant;
+export default EditAgriEquipment;

@@ -1,7 +1,7 @@
 import React,{useState} from "react"
 import {useHistory} from 'react-router-dom';
 import axios from "axios";
-import { Form,Button,Col,Row,InputGroup } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 
 const AddAgroChemical = ()=>{
 
@@ -66,7 +66,7 @@ else{
 
 
           
-          <form noValidate validated={validated} class="signup-form" onSubmit={changeOnClick} encType="multipart/form-data">
+          <Form noValidate validated={validated} class="signup-form" onSubmit={changeOnClick} encType="multipart/form-data">
             <div className="form-group" controlId="validationCustom01">
               <input
                 type="text"
@@ -92,6 +92,9 @@ else{
                 onChange={(e)=>setDescription(e.target.value)}
                 required
               />
+              <Form.Control.Feedback type="invalid">
+              Please provide Description
+            </Form.Control.Feedback>
             </div>
             <div className="form-group">
               <input
@@ -103,15 +106,21 @@ else{
                 onChange={(e)=>setPrice(e.target.value)}
                 required
               />
+              <Form.Control.Feedback type="invalid">
+              Please provide Price 
+            </Form.Control.Feedback>
             </div>
 
             <lable class="label-title"><b>Add an Image*</b>
             <div class="mb-3">
-            <input class="form-control" type="file" id="formFile" filename="agrochemicalImage" onChange={onChangeFile}/>
+            <input class="form-control" required type="file" id="formFile" filename="agrochemicalImage" onChange={onChangeFile}/>
+            <Form.Control.Feedback type="invalid">
+              Please provide Image. 
+            </Form.Control.Feedback>
             </div></lable>
 
             <button className="btn btn-primary btn-block">Done</button>
-          </form>
+          </Form>
         </div>
       </div>
       </div>

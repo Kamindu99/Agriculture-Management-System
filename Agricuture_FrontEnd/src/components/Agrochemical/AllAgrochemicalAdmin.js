@@ -111,7 +111,7 @@ export default class AllAgroChemicalAdmin extends Component {
       <td>Ch_0{idx + 1}</td>
       <td>{eq.agrochemicalName}</td>
       <td>{eq.price}</td>
-      <td><button>Edit</button></td>
+      <td><button><a href={`/agrochemical/edit/${eq._id}`}>Edit</a></button></td>
     </tr>
   ))}
   </tbody>

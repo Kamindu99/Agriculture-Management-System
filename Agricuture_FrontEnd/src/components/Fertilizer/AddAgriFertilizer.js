@@ -1,10 +1,12 @@
 import React,{useState} from "react"
 import {useHistory} from 'react-router-dom';
 import axios from "axios";
+import { Form } from "react-bootstrap";
 
 const AddFertilizer = ()=>{
 
      let history = useHistory();
+     const [validated, setValidated] = useState(false);
 
      const[fertilizerName,setName]=useState("");
      const[description,setDescription]=useState("");
@@ -17,6 +19,14 @@ const AddFertilizer = ()=>{
      }
    
    const changeOnClick =(e)=>{
+    const form = e.currentTarget;
+    if (form.checkValidity() === false) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+else{
+
        e.preventDefault();
    
        const formData=new FormData();
@@ -40,6 +50,8 @@ const AddFertilizer = ()=>{
        });
        history.push("/agrifertilizer/all");
        alert("New Fertilizer Added Successful")
+      }
+      setValidated(true);
    };
     return (
       <div className="pagemargin">
@@ -54,7 +66,7 @@ const AddFertilizer = ()=>{
 
 
           
-          <form class="signup-form" onSubmit={changeOnClick} encType="multipart/form-data">
+          <Form noValidate validated={validated} class="signup-form" onSubmit={changeOnClick} encType="multipart/form-data">
             <div className="form-group">
               <input
                 type="text"
@@ -65,6 +77,9 @@ const AddFertilizer = ()=>{
                 onChange={(e)=>setName(e.target.value)}
                 required
               />
+              <Form.Control.Feedback type="invalid">
+              Please provide a valid name. 
+            </Form.Control.Feedback>
             </div>
             <div className="form-group">
               <textarea
@@ -77,6 +92,9 @@ const AddFertilizer = ()=>{
                 onChange={(e)=>setDescription(e.target.value)}
                 required
               />
+              <Form.Control.Feedback type="invalid">
+              Please provide Description.
+            </Form.Control.Feedback>
             </div>
             <div className="form-group">
               <input
@@ -88,15 +106,21 @@ const AddFertilizer = ()=>{
                 onChange={(e)=>setPrice(e.target.value)}
                 required
               />
+              <Form.Control.Feedback type="invalid">
+              Please provide Price.
+            </Form.Control.Feedback>
             </div>
 
             <lable class="label-title"><b>Add an Image*</b>
             <div class="mb-3">
-            <input class="form-control" type="file" id="formFile" filename="fertilizerImage" onChange={onChangeFile}/>
+            <input class="form-control" required type="file" id="formFile" filename="fertilizerImage" onChange={onChangeFile}/>
+            <Form.Control.Feedback type="invalid">
+              Please provide Image. 
+            </Form.Control.Feedback>
             </div></lable>
 
             <button className="btn btn-primary btn-block">Done</button>
-          </form>
+          </Form>
         </div>
       </div>
       </div>

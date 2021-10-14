@@ -1,25 +1,21 @@
-import React,{useState} from "react"
+import React,{useState,useEffect} from "react"
 import {useHistory} from 'react-router-dom';
 import axios from "axios";
 import { Form } from "react-bootstrap";
 
-const AddPlant = ()=>{
+const EditAgroChemical = (props)=>{
 
-     let history = useHistory();
      const [validated, setValidated] = useState(false);
+     const id = props.match.params.id;
+     let history = useHistory();
 
-     const[plantName,setName]=useState("");
+     const[agrochemicalName,setName]=useState("");
      const[description,setDescription]=useState("");
      const[price,setPrice]=useState("");
      const[,setMessage]=useState("");
-     const[plantImage,setFileName]=useState("");
    
-     const onChangeFile= e=>{
-         setFileName(e.target.files[0]);
-     }
    
    const changeOnClick =(e)=>{
-
     const form = e.currentTarget;
     if (form.checkValidity() === false) {
       e.preventDefault();
@@ -30,10 +26,9 @@ else{
        e.preventDefault();
    
        const formData=new FormData();
-       formData.append("plantName",plantName);
+       formData.append("agrochemicalName",agrochemicalName);
        formData.append("description",description);
        formData.append("price",price);
-       formData.append("plantImage",plantImage);
    
        setName("");
        setDescription("");
@@ -41,42 +36,62 @@ else{
        
    
        axios
-       .post("http://localhost:8000/agriplant/admin/add",formData)
+       .put(`http://localhost:8000/agrochemical/admin/update/${id}`,formData)
        .then(
         (res)=>setMessage(res.data))
         
        .catch((err)=>{
            console.log(err);
        });
-       history.push("/agriplant/all");
-       alert("New Plant Added Successful")
+       history.push("/admin/agrochemical/all");
+       alert("Agrochemical Details Edit Successful")
       }
       setValidated(true);
    };
+
+   useEffect(() => {
+    axios
+      .get(
+        `http://localhost:8000/agrochemical/admin/${props.match.params.id}`
+      )
+      .then((res) =>
+       [
+        setName(res.data.agrochemical.agrochemicalName),
+        setPrice(res.data.agrochemical.price),
+        setDescription(res.data.agrochemical.description)
+       
+      ])
+      .catch((error) => console.log(error));
+  }, []);
+
+
+
+
     return (
-      <div className="pagemargin">
+      <div >
       <div>
+      <br/>
         <div className="container">
         <div className="w-75 mx-auto shadow p-5">
-          <h2 className="text-center mb-4">Add Plant</h2>
+          <h2 className="text-center mb-4">Edit Agrochemical</h2>
 
 
 
 
 
           
-          <Form noValidate validated={validated} class="signup-form" onSubmit={changeOnClick} encType="multipart/form-data">
-            <div className="form-group">
+          <form noValidate validated={validated} class="signup-form" onSubmit={changeOnClick} encType="multipart/form-data">
+            <div className="form-group" controlId="validationCustom01">
               <input
                 type="text"
                 className="form-control form-control-lg"
                 placeholder="Enter Name"
-                name="plantName"
-                value={plantName}
+                name="agrochemicalName"
+                value={agrochemicalName}
                 onChange={(e)=>setName(e.target.value)}
                 required
               />
-              <Form.Control.Feedback type="invalid">
+               <Form.Control.Feedback type="invalid">
               Please provide a valid name. 
             </Form.Control.Feedback>
             </div>
@@ -91,9 +106,6 @@ else{
                 onChange={(e)=>setDescription(e.target.value)}
                 required
               />
-              <Form.Control.Feedback type="invalid">
-              Please provide Description.
-            </Form.Control.Feedback>
             </div>
             <div className="form-group">
               <input
@@ -105,21 +117,15 @@ else{
                 onChange={(e)=>setPrice(e.target.value)}
                 required
               />
-              <Form.Control.Feedback type="invalid">
-              Please provide Price. 
-            </Form.Control.Feedback>
             </div>
 
             <lable class="label-title"><b>Add an Image*</b>
             <div class="mb-3">
-            <input class="form-control" required type="file" id="formFile" filename="plantImage" onChange={onChangeFile}/>
-            <Form.Control.Feedback type="invalid">
-              Please provide Image. 
-            </Form.Control.Feedback>
+            <input class="form-control" type="file" id="formFile" />
             </div></lable>
 
             <button className="btn btn-primary btn-block">Done</button>
-          </Form>
+          </form>
         </div>
       </div>
       </div>
@@ -128,4 +134,4 @@ else{
     );
 };
 
-export default AddPlant;
+export default EditAgroChemical;

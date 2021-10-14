@@ -106,7 +106,7 @@ export default class AllEquipmentAdmin extends Component {
       <td>Eq_0{idx + 1}</td>
       <td>{eq.equipmentName}</td>
       <td>{eq.price}</td>
-      <td><button>Edit</button></td>
+      <td><button><a href={`/agriequipment/edit/${eq._id}`}>Edit</a></button></td>
     </tr>
   ))}
   </tbody>
