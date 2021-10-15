@@ -44,6 +44,15 @@ export default class AllPlantAdmin extends Component {
         });
       };
 
+      onDelete = (id) =>{
+        if(window.confirm("Confirm Delete")){
+              axios.delete(`http://localhost:8000/agriplant/admin/delete/${id}`).then((res)=>{
+      
+              alert("success Deleted");
+              this.retrievePlant();
+          })}}
+
+
     
     
       render() {
@@ -107,7 +116,8 @@ export default class AllPlantAdmin extends Component {
       <td>Eq_0{idx + 1}</td>
       <td>{eq.plantName}</td>
       <td>{eq.price}</td>
-      <td><button><a href={`/agriplant/edit/${eq._id}`}>Edit</a></button></td>
+      <td><button><a href={`/agriplant/edit/${eq._id}`}>Edit</a></button>
+      <button onClick={()=>this.onDelete(eq._id)}>Delete</button></td>
     </tr>
   ))}
   </tbody>

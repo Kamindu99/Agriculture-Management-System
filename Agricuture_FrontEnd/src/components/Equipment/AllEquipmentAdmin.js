@@ -43,6 +43,15 @@ export default class AllEquipmentAdmin extends Component {
           }
         });
       };
+
+      onDelete = (id) =>{
+        if(window.confirm("Confirm Delete")){
+              axios.delete(`http://localhost:8000/agriequipment/admin/delete/${id}`).then((res)=>{
+      
+              alert("success Deleted");
+              this.retrieveEquipment();
+          })}}
+
     
       render() {
 
@@ -106,7 +115,8 @@ export default class AllEquipmentAdmin extends Component {
       <td>Eq_0{idx + 1}</td>
       <td>{eq.equipmentName}</td>
       <td>{eq.price}</td>
-      <td><button><a href={`/agriequipment/edit/${eq._id}`}>Edit</a></button></td>
+      <td><button><a href={`/agriequipment/edit/${eq._id}`}>Edit</a></button>
+      <button onClick={()=>this.onDelete(eq._id)}>Delete</button></td>
     </tr>
   ))}
   </tbody>

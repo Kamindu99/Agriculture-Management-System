@@ -43,6 +43,15 @@ export default class AllSeedAdmin extends Component {
           }
         });
       };
+
+      onDelete = (id) =>{
+        if(window.confirm("Confirm Delete")){
+              axios.delete(`http://localhost:8000/agriseed/admin/delete/${id}`).then((res)=>{
+      
+              alert("success Deleted");
+              this.retrieveSeed();
+          })}}
+
     
       render() {
 
@@ -105,7 +114,8 @@ export default class AllSeedAdmin extends Component {
       <td>Eq_0{idx + 1}</td>
       <td>{seed.seedName}</td>
       <td>{seed.price}</td>
-      <td><button><a href={`/agriseed/edit/${seed._id}`}>Edit</a></button></td>
+      <td><button><a href={`/agriseed/edit/${seed._id}`}>Edit</a></button>
+      <button onClick={()=>this.onDelete(seed._id)}>Delete</button></td>
     </tr>
   ))}
   </tbody>

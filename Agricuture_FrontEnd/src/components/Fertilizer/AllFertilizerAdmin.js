@@ -43,6 +43,15 @@ export default class AllFertilizerAdmin extends Component {
           }
         });
       };
+
+      onDelete = (id) =>{
+        if(window.confirm("Confirm Delete")){
+              axios.delete(`http://localhost:8000/agrifertilizer/admin/delete/${id}`).then((res)=>{
+      
+              alert("success Deleted");
+              this.retrievefertilizer();
+          })}}
+
     
       render() {
 
@@ -104,7 +113,8 @@ export default class AllFertilizerAdmin extends Component {
       <td>Ch_0{idx + 1}</td>
       <td>{fertilizer.fertilizerName}</td>
       <td>{fertilizer.price}</td>
-      <td><button><a href={`/agrifertilizer/edit/${fertilizer._id}`}>Edit</a></button></td>
+      <td><button><a href={`/agrifertilizer/edit/${fertilizer._id}`}>Edit</a></button>
+      <button onClick={()=>this.onDelete(fertilizer._id)}>Delete</button></td>
     </tr>
   ))}
   </tbody>

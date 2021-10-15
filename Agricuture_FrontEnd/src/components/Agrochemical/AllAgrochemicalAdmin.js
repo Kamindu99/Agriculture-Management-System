@@ -45,9 +45,17 @@ export default class AllAgroChemicalAdmin extends Component {
         });
       };
     
+
+      onDelete = (id) =>{
+        if(window.confirm("Confirm Delete")){
+              axios.delete(`http://localhost:8000/agrochemical/admin/delete/${id}`).then((res)=>{
+      
+              alert("success Deleted");
+              this.retrieveagrochemical();
+          })}}
+
+
       render() {
-
-
     return(
       <div>
         <div>
@@ -111,7 +119,9 @@ export default class AllAgroChemicalAdmin extends Component {
       <td>Ch_0{idx + 1}</td>
       <td>{eq.agrochemicalName}</td>
       <td>{eq.price}</td>
-      <td><button><a href={`/agrochemical/edit/${eq._id}`}>Edit</a></button></td>
+      <td><button><a href={`/agrochemical/edit/${eq._id}`}>Edit</a></button>
+      <button onClick={()=>this.onDelete(eq._id)}>Delete</button></td>
+  
     </tr>
   ))}
   </tbody>

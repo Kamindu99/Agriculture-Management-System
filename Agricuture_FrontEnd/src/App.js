@@ -20,13 +20,13 @@ import AllEquipmentAdmin from './components/Equipment/AllEquipmentAdmin';
 import AllFertilizerAdmin from './components/Fertilizer/AllFertilizerAdmin';
 import AllPlantAdmin from './components/Plant/AllPlantAdmin';
 import AllSeedAdmin from './components/Seed/AllSeedAdmin';
-
-import {BrowserRouter as Router, Route} from "react-router-dom"
 import EditAgroChemical from './components/Agrochemical/EditAgroChemical';
 import EditAgriEquipment from './components/Equipment/EditAgriEquipment';
 import EditAgriSeed from './components/Seed/EditAgriSeed';
 import EditAgriPlant from './components/Plant/EditAgriPlant';
 import EditAgriFertilizer from './components/Fertilizer/EditAgriFertilizer';
+
+import {BrowserRouter as Router, Route} from "react-router-dom"
 
 function App() {
   return (
