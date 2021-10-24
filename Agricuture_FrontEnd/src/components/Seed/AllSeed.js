@@ -56,6 +56,9 @@ export default class AgriSeed extends Component {
         <div className="pagemargin" style={{background:"#ccccff"}}>
 
 
+      <p style={{background:"gray"}}>  The primary form of agriculture in Sri Lanka is rice production. Rice is cultivated during Maha and Yala seasons. Tea is cultivated in the central highlands and is a major source of foreign exchange. Vegetables, fruits and oilseed crops are also cultivated in the country.
+        The primary form of agriculture in Sri Lanka is rice production. Rice is cultivated during Maha and Yala seasons. Tea is cultivated in the central highlands and is a major source of foreign exchange. Vegetables, fruits and oilseed crops are also cultivated in the country.</p>
+
 <div     class=""
               style={{
                 backgroundColor: "hsla(101, 27%, 53%, 0.27)",

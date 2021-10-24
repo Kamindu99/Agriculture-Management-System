@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import '../../styles/Equipment.css'
+import AdminHeader from '../AdminHeader';
 
 export default class AllEquipmentAdmin extends Component {
     constructor(props) {
@@ -58,7 +59,8 @@ export default class AllEquipmentAdmin extends Component {
 
     return(
       <div>
-        <div>
+        <AdminHeader/>
+        <div className="pagemargin">
 
 
 <div     class=""

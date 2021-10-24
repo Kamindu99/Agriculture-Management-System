@@ -2,6 +2,7 @@ import React,{useState,useEffect} from "react"
 import {useHistory} from 'react-router-dom';
 import axios from "axios";
 import { Form } from "react-bootstrap";
+import AdminHeader from '../AdminHeader';
 
 const EditAgriEquipment = (props)=>{
 
@@ -65,7 +66,8 @@ else{
 
     return (
       <div>
-      <div>
+        <AdminHeader/>
+      <div className="pagemargin">
       <br/>
         <div className="container">
         <div className="w-75 mx-auto shadow p-5">

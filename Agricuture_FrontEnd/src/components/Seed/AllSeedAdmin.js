@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import '../../styles/Equipment.css'
+import AdminHeader from '../AdminHeader';
 
 export default class AllSeedAdmin extends Component {
     constructor(props) {
@@ -58,10 +59,11 @@ export default class AllSeedAdmin extends Component {
 
     return(
       <div>
-        <div>
+        <AdminHeader/>
+        <div className="pagemargin">
 
 
-<div     class=""
+<div     
               style={{
                 backgroundColor: "hsla(101, 27%, 53%, 0.27)",
                 paddingBottom: "5px",

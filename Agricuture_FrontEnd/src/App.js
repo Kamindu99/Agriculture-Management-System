@@ -3,6 +3,7 @@ import AdminHome from './components/AdminHome';
 import Aboutus from './components/AboutUs';
 import AddAgriEquipment from './components/Equipment/AddAgriEquipment';
 import AgriEquipment from './components/Equipment/AllEquipment';
+import EquipmentDetails from './components/Equipment/EquipmentDetails';
 import AddAgriSeed from './components/Seed/AddAgriSeed';
 import AgriSeed from './components/Seed/AllSeed';
 import AddAgriPlant from './components/Plant/AddAgriPlant';
@@ -38,6 +39,7 @@ function App() {
       <Route path="/agriequipment/add" exact component = {AddAgriEquipment}></Route>
       <Route path="/agriequipment/edit/:id" exact component = {EditAgriEquipment}></Route>
       <Route path="/agriequipment/all" exact component = {AgriEquipment}></Route>
+      <Route path="/agriequipment/details/:id" exact component ={EquipmentDetails} ></Route>
       <Route path="/admin/agriequipment/all" exact component = {AllEquipmentAdmin}></Route>
       <Route path="/agriseed/add" exact component = {AddAgriSeed}></Route>
       <Route path="/agriseed/edit/:id" exact component = {EditAgriSeed}></Route>

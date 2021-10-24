@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import '../App.css'
+import AdminHeader from './AdminHeader';
 
 
 class AdminHome extends Component {
     render() {
         return (
             <body>
+                <AdminHeader/>
+                <div className="pagemargin">
+                <br/>
+                
                 <div className="Scontainer">
+                    <br/>
                     <a href="/admin/agriequipment/all">
                     <button className="btn btn-primary mr-3 mb-3">Equipment Management</button>
                     </a>
@@ -37,6 +43,7 @@ class AdminHome extends Component {
                     <a href="/">
                     <button className="btn btn-primary mr-3 mb-3">User Management</button>
                     </a>
+                </div>
                 </div>
             </body>
         );

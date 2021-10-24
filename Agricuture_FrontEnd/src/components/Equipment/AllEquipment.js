@@ -118,7 +118,7 @@ export default class AgriEquipment extends Component {
                     </div>
                     <h6 class="text-success">Free Delivery</h6>
                     <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm " type="button" >Details</button>
-                    <button class="btn btn-outline-primary btn-sm mt-2" type="button">Add to wishlist</button></div>
+                    <button class="btn btn-outline-primary btn-sm mt-2" type="button"><a href={`/agriequipment/details/${eq._id}`}>Add to wishlist</a></button></div>
                 </div>
             </div>
 ))}

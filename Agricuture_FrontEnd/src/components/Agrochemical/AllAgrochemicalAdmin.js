@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Row } from "react-bootstrap";
 import '../../styles/Equipment.css'
+import AdminHeader from '../AdminHeader';
 
 export default class AllAgroChemicalAdmin extends Component {
     constructor(props) {
@@ -58,10 +58,11 @@ export default class AllAgroChemicalAdmin extends Component {
       render() {
     return(
       <div>
-        <div>
+        <AdminHeader/>
+        <div className="pagemargin">
 
 
-<div     class=""
+<div     
               style={{
                 
                 backgroundColor: "hsla(101, 27%, 53%, 0.27)",
