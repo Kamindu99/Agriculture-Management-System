@@ -237,6 +237,10 @@ li {
   z-index: -1;
 }
 
+.sidebar-navigation  .activebar {
+  background-color: #166091;
+}
+
 .sidebar-navigation li:hover::before {
   width: 100%;
 }

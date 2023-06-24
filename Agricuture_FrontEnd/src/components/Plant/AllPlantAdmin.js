@@ -85,7 +85,7 @@ export default class AllPlantAdmin extends Component {
                     <input
                       id="search-input"
                       type="search"
-                      id="form1"
+                      
                       style={{width:"400px"}}
                       placeholder="Search Plant"
                       onChange={this.handleSearchArea}

@@ -12,11 +12,7 @@ const AddPlant = ()=>{
      const[description,setDescription]=useState("");
      const[price,setPrice]=useState("");
      const[,setMessage]=useState("");
-     const[plantImage,setFileName]=useState("");
-   
-     const onChangeFile= e=>{
-         setFileName(e.target.files[0]);
-     }
+     const[plantImage,setPlantImage]=useState("");
    
    const changeOnClick =(e)=>{
 
@@ -28,20 +24,16 @@ const AddPlant = ()=>{
 
 else{
        e.preventDefault();
-   
-       const formData=new FormData();
-       formData.append("plantName",plantName);
-       formData.append("description",description);
-       formData.append("price",price);
-       formData.append("plantImage",plantImage);
-   
-       setName("");
-       setDescription("");
-       setPrice("");
-       
+      
+       let plantDetails={
+          plantName,
+          description,
+          price,
+          plantImage
+        }
    
        axios
-       .post("http://localhost:8000/agriplant/admin/add",formData)
+       .post("http://localhost:8000/agriplant/admin/add",plantDetails)
        .then(
         (res)=>setMessage(res.data))
         
@@ -112,7 +104,7 @@ else{
 
             <lable class="label-title"><b>Add an Image*</b>
             <div class="mb-3">
-            <input class="form-control" required type="file" id="formFile" filename="plantImage" onChange={onChangeFile}/>
+            <input class="form-control" required type="text" id="formFile"  onChange={(e)=>setPlantImage(e.target.value)}/>
             <Form.Control.Feedback type="invalid">
               Please provide Image. 
             </Form.Control.Feedback>

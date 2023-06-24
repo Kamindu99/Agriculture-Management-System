@@ -155,66 +155,69 @@ const Homepage = () => {
 
 
         <div class="container mynewcss">
-        <div class="d-lg-flex">
+          <div class="d-lg-flex">
             <div class="d-md-flex align-items-center mb-lg-0 mb-md-5">
-                <div class="col1 me-md-4 mb-md-0 mb-5">
-                    <div class="card pb-4">
-                        <span class="fab fa-envira mt-3"></span>
-                        <p class="h4 pt-4">Garden Care</p>
-                        <p class="p1 text-muted">
-                            Seeking justice in the world is a sed significant emotional and investment when we follow
-                            this
-                            call.
-                        </p>
-                        <span class="fas fa-arrow-right"></span>
-                    </div>
+              <div class="col1 me-md-4 mb-md-0 mb-5">
+                <div class="card pb-4">
+                  <span class="fab fa-envira mt-3"></span>
+                  <p class="h4 pt-4">Garden Care</p>
+                  <p class="p1 text-muted">
+                    Seeking justice in the world is a sed significant emotional and investment when we follow
+                    this
+                    call.
+                  </p>
+                  <span class="fas fa-arrow-right"></span>
                 </div>
-                <div class="col2 me-md-4 mb-md-0 mb-5">
-                    <div class="card pb-4">
-                        <span class="fas fa-cut mt-3"></span>
-                        <p class="h4 pt-4">Lawn mowing</p>
-                        <p class="p1 text-muted">
-                            Seeking justice in the world is a sed significant emotional and investment when we follow
-                            this
-                            call.
-                        </p>
-                        <span class="fas fa-arrow-right"></span>
-                    </div>
+              </div>
+              <div class="col2 me-md-4 mb-md-0 mb-5">
+                <div class="card pb-4">
+                  <span class="fas fa-cut mt-3"></span>
+                  <p class="h4 pt-4">Lawn mowing</p>
+                  <p class="p1 text-muted">
+                    Seeking justice in the world is a sed significant emotional and investment when we follow
+                    this
+                    call.
+                  </p>
+                  <span class="fas fa-arrow-right"></span>
                 </div>
-                <div class="col3 me-md-4 mb-md-0 mb-5">
-                    <div class="card pb-4">
-                        <span class="fas fa-people-carry mt-3"></span>
-                        <p class="h4 pt-4">Lawn care</p>
-                        <p class="p1 text-muted">
-                            Seeking justice in the world is a sed significant emotional and investment when we follow
-                            this
-                            call.
-                        </p>
-                        <span class="fas fa-arrow-right"></span>
-                    </div>
+              </div>
+              <div class="col3 me-md-4 mb-md-0 mb-5">
+                <div class="card pb-4">
+                  <span class="fas fa-people-carry mt-3"></span>
+                  <p class="h4 pt-4">Lawn care</p>
+                  <p class="p1 text-muted">
+                    Seeking justice in the world is a sed significant emotional and investment when we follow
+                    this
+                    call.
+                  </p>
+                  <span class="fas fa-arrow-right"></span>
                 </div>
+              </div>
             </div>
             <div class="col4">
-                <div class="content">
-                    <span class="h-6">Services</span>
-                    <p class=" h2 mb-4">Lawn Services</p>
-                    <p class="text-muted mb-4">A small river named Duden flows by their place and supplies it with the
-                        necessary regelialia. It
-                        is a paradisematic country, in which roasted parts of sentences fly into your.</p>
-                    <p><a href="#" class="btn btn-primary">Get a Quote</a></p>
-                </div>
+              <div class="content">
+                <span class="h-6">Services</span>
+                <p class=" h2 mb-4">Lawn Services</p>
+                <p class="text-muted mb-4">A small river named Duden flows by their place and supplies it with the
+                  necessary regelialia. It
+                  is a paradisematic country, in which roasted parts of sentences fly into your.</p>
+                <p><a href="#" class="btn btn-primary">Get a Quote</a></p>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
 
 
 
-
-
-
-
-
-
+        <div className="hoverdddd">
+          <div class="card">
+            <div class="wrapper">
+              <img src="https://res.cloudinary.com/dmfljlyu1/image/upload/v1687031468/myprof_t8slio.png" class="cover-image" />
+            </div>
+            <h6 class="title" style={{ color: 'white' }}>  </h6>
+            <img src="https://res.cloudinary.com/dmfljlyu1/image/upload/v1687031468/myprof_t8slio.png" class="character" />
+          </div>
+        </div>
 
 
 
@@ -227,13 +230,12 @@ const Homepage = () => {
           </div>
         </header>
 
-
         <div class="container">
-          <div class="row">
+          <div class="row" style={{ marginLeft: '50px', marginRight: '50px' }}>
 
             <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-0 shadow">
-                <img src="https://res.cloudinary.com/dmfljlyu1/image/upload/v1687380859/MyImages/Myimages_27_yw37mj.jpg" style={{height:'300px', objectFit: 'cover'}} class="card-img-top" alt="..." />
+              <div class="card border-0 shadow hovermyCardp">
+                <img src="https://res.cloudinary.com/dmfljlyu1/image/upload/v1687380859/MyImages/Myimages_27_yw37mj.jpg" style={{ height: '300px', objectFit: 'cover' }} class="card-img-top" alt="..." />
                 <div class="card-body text-center">
                   <h5 class="card-title mb-0">Kamindu Gayantha</h5>
                   <div class="card-text text-black-50">CEO of the Company </div>
@@ -242,8 +244,8 @@ const Homepage = () => {
             </div>
 
             <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-0 shadow">
-                <img src="https://res.cloudinary.com/dmfljlyu1/image/upload/v1687378621/MyImages/Myimages_17_jxymkn.jpg" style={{height:'300px', objectFit: 'cover'}} class="card-img-top" alt="..." />
+              <div class="card border-0 shadow hovermyCardp">
+                <img src="https://res.cloudinary.com/dmfljlyu1/image/upload/v1687378621/MyImages/Myimages_17_jxymkn.jpg" style={{ height: '300px', objectFit: 'cover' }} class="card-img-top" alt="..." />
                 <div class="card-body text-center">
                   <h5 class="card-title mb-0">Gayantha Kamindu</h5>
                   <div class="card-text text-black-50">
@@ -254,10 +256,10 @@ const Homepage = () => {
             </div>
 
             <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-0 shadow">
-                <img src="https://media.licdn.com/dms/image/C5603AQGnBMwskpBqvw/profile-displayphoto-shrink_800_800/0/1656409186148?e=2147483647&v=beta&t=1JY6ZWlcPp7IySxX-_I6ECkodmTMZFKR4WA1K5nl75A" style={{height:'300px', objectFit: 'cover'}} class="card-img-top" alt="..." />
+              <div class="card border-0 shadow hovermyCardp">
+                <img src="https://media.licdn.com/dms/image/C5603AQGnBMwskpBqvw/profile-displayphoto-shrink_800_800/0/1656409186148?e=2147483647&v=beta&t=1JY6ZWlcPp7IySxX-_I6ECkodmTMZFKR4WA1K5nl75A" style={{ height: '300px', objectFit: 'cover' }} class="card-img-top" alt="..." />
                 <div class="card-body text-center">
-                  <h5 class="card-title mb-0">Gayantha Wanigasinghe</h5>
+                  <h5 class="card-title mb-0">G K Gayantha</h5>
                   <div class="card-text text-black-50">
                     Director of the Company
                   </div>
@@ -266,8 +268,8 @@ const Homepage = () => {
             </div>
 
             <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-0 shadow">
-                <img src="https://res.cloudinary.com/dmfljlyu1/image/upload/v1687378620/MyImages/Myimages_8_jpvo51.jpg"  style={{height:'300px', objectFit: 'cover'}} class="card-img-top" alt="..." />
+              <div class="card border-0 shadow hovermyCardp">
+                <img src="https://res.cloudinary.com/dmfljlyu1/image/upload/v1687378620/MyImages/Myimages_8_jpvo51.jpg" style={{ height: '300px', objectFit: 'cover' }} class="card-img-top" alt="..." />
                 <div class="card-body text-center">
                   <h5 class="card-title mb-0">K G Wanigasinghe</h5>
                   <div class="card-text text-black-50">

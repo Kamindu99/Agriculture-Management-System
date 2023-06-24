@@ -596,3 +596,149 @@
   cursor: pointer;
   background-image: linear-gradient(-45deg, #27b88d 0%, #22dd73 100%)
 }
+
+.hovermyCardp {
+  animation-duration: 4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-name: rotate;
+  transform: translate3d(0,0,0);
+}
+
+.hovermyCardp:hover {
+  transform: scale(0.9);
+  transition: all 0.5s ease;
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+
+}
+
+.hoverdddd {}
+
+.hoverdddd body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #191c29;
+}
+
+.hoverdddd .card {
+  width: 220px;
+  height: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  perspective: 2500px;
+  margin: 0 50px;
+}
+
+.hoverdddd .cover-image {
+  width: 220px;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.hoverdddd .wrapper {
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.hoverdddd .card:hover .wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.hoverdddd .wrapper::before,
+.hoverdddd .wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+
+.hoverdddd .wrapper::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(to top,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%);
+}
+
+.hoverdddd .wrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(to bottom,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%);
+}
+
+.hoverdddd .card:hover .wrapper::before,
+.hoverdddd .wrapper::after {
+  opacity: 1;
+  
+}
+
+.hoverdddd .card:hover .wrapper::after {
+  height: 120px;
+}
+
+.hoverdddd .title {
+  width: 100%;
+  transition: transform 0.5s;
+}
+
+.hoverdddd .card:hover .title {
+  transform: translate3d(0%, -50px, 100px);
+}
+
+.hoverdddd .character {
+  width: 100%;
+  opacity: 0;
+  transition: all 1s;
+  position: absolute;
+  object-fit: cover;
+  object-position: top;
+  z-index: -1;
+  height: 500px;
+}
+
+.hoverdddd .card:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}
+
+
+/* Animation */
+@keyframes rotate {
+	from,
+	to {
+		animation-timing-function: ease-in;
+		transform: rotateY(-10deg );
+	}
+	25%,
+	75% {
+		animation-timing-function: ease-out;
+		transform: rotateY(0deg);
+	}
+	50% {
+		animation-timing-function: ease-in;
+
+		transform: rotateY(10deg);
+	}
+}

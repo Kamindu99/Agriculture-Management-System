@@ -83,7 +83,7 @@ export default class AllFertilizerAdmin extends Component {
                     <input
                       id="search-input"
                       type="search"
-                      id="form1"
+                      
                       style={{width:"400px"}}
                       placeholder="Search Fertilizer"
                       onChange={this.handleSearchArea}

@@ -83,7 +83,7 @@ export default class AllSeedAdmin extends Component {
                     <input
                       id="search-input"
                       type="search"
-                      id="form1"
+                      
                       style={{width:"400px"}}
                       placeholder="Search Seed"
                       onChange={this.handleSearchArea}
@@ -107,6 +107,7 @@ export default class AllSeedAdmin extends Component {
       <th scope="col">Equipment ID</th>
       <th scope="col">Name</th>
       <th scope="col">Price</th>
+      <th scope="col">Image Link</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -116,6 +117,7 @@ export default class AllSeedAdmin extends Component {
       <td>Eq_0{idx + 1}</td>
       <td>{seed.seedName}</td>
       <td>{seed.price}</td>
+      <td>{seed.seedImage}</td>
       <td><button><a href={`/agriseed/edit/${seed._id}`}>Edit</a></button>
       <button onClick={()=>this.onDelete(seed._id)}>Delete</button></td>
     </tr>

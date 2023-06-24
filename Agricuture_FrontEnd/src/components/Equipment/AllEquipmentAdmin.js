@@ -83,7 +83,7 @@ export default class AllEquipmentAdmin extends Component {
                     <input
                       id="search-input"
                       type="search"
-                      id="form1"
+                      
                       style={{width:"400px"}}
                       placeholder="Search Equipment"
                       onChange={this.handleSearchArea}
