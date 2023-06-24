@@ -71,7 +71,7 @@ const EquipmentDetails = () => {
                   class="bd-placeholder-img"
                   width="100%"
                   height="70%"
-                  src={`/uploads/${aEquipment.equipmentImage}`}
+                  src={`${aEquipment.equipmentImage}`}
                   aria-label="Placeholder: Image"
                   preserveAspectRatio="xMidYMid slice"
                   role="img"

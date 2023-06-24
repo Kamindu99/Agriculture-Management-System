@@ -1,26 +1,13 @@
 const express = require('express');
 const Agrochemical = require('../models/AgroChemical');
-const multer = require("multer")
 const router =express.Router();
 
-const storage=multer.diskStorage({
-    destination:(req,file,callback)=>{
-        callback(null,"../Agricuture_FrontEnd/public/uploads");
-    },
-    filename:(req,file,callback)=>{
-        callback(null,file.originalname);
-    }
-})
-
-const upload=multer({storage:storage});
-
-
-router.post('/admin/add', upload.single("agrochemicalImage") ,(req,res)=>{
+router.post('/admin/add',(req,res)=>{
     const newAgrochemical=new Agrochemical({
         agrochemicalName:req.body.agrochemicalName,
         description:req.body.description,
         price:req.body.price,
-        agrochemicalImage:req.file.originalname,
+        agrochemicalImage:req.body.agrochemicalImage
     });
     newAgrochemical
     .save()
@@ -56,13 +43,13 @@ router.get('/admin/:id',(req,res)=>{
     });
 });
 
-router.put('/admin/update/:id' , upload.single("agrochemicalImage"),(req,res)=>{
+router.put('/admin/update/:id' ,(req,res)=>{
     Agrochemical.findByIdAndUpdate(req.params.id)
     .then((agrochemical )=> {
         agrochemical.agrochemicalName=req.body.agrochemicalName;
         agrochemical.description=req.body.description;
         agrochemical.price=req.body.price;
-        
+        agrochemical.agrochemicalImage=req.body.agrochemicalImage;
 
         agrochemical
             .save()

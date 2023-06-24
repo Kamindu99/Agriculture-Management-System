@@ -1,26 +1,13 @@
 const express = require('express');
 const AgriPlant = require('../models/AgriPlant');
-const multer = require("multer")
 const router =express.Router();
 
-const storage=multer.diskStorage({
-    destination:(req,file,callback)=>{
-        callback(null,"../Agricuture_FrontEnd/public/uploads");
-    },
-    filename:(req,file,callback)=>{
-        callback(null,file.originalname);
-    }
-})
-
-const upload=multer({storage:storage});
-
-
-router.post('/admin/add', upload.single("plantImage") ,(req,res)=>{
+router.post('/admin/add' ,(req,res)=>{
     const newPlant=new AgriPlant({
         plantName:req.body.plantName,
         description:req.body.description,
         price:req.body.price,
-        plantImage:req.file.originalname,
+        plantImage:req.body.plantImage,
     });
     newPlant
     .save()
@@ -56,13 +43,13 @@ router.get('/admin/:id',(req,res)=>{
     });
 });
 
-router.put('/admin/update/:id' , upload.single("plantImage"),(req,res)=>{
+router.put('/admin/update/:id',(req,res)=>{
     AgriPlant.findByIdAndUpdate(req.params.id)
     .then((plant )=> {
         plant.plantName=req.body.plantName;
         plant.description=req.body.description;
         plant.price=req.body.price;
-        
+        plant.plantImage=req.body.plantImage;
 
         plant
             .save()

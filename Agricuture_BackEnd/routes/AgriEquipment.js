@@ -1,26 +1,13 @@
 const express = require('express');
 const AgriEquipment = require('../models/AgriEquipment');
-const multer = require("multer")
 const router =express.Router();
 
-const storage=multer.diskStorage({
-    destination:(req,file,callback)=>{
-        callback(null,"../Agricuture_FrontEnd/public/uploads");
-    },
-    filename:(req,file,callback)=>{
-        callback(null,file.originalname);
-    }
-})
-
-const upload=multer({storage:storage});
-
-
-router.post('/admin/add', upload.single("equipmentImage") ,(req,res)=>{
+router.post('/admin/add',(req,res)=>{
     const newEquipment=new AgriEquipment({
         equipmentName:req.body.equipmentName,
         description:req.body.description,
         price:req.body.price,
-        equipmentImage:req.file.originalname,
+        equipmentImage:req.body.equipmentImage,
     });
     newEquipment
     .save()
@@ -56,14 +43,14 @@ router.get('/admin/:id',(req,res)=>{
     });
 });
 
-router.put('/admin/update/:id' , upload.single("equipmentImage"),(req,res)=>{
+router.put('/admin/update/:id' ,(req,res)=>{
     AgriEquipment.findByIdAndUpdate(req.params.id)
     .then((equipment )=> {
         equipment.equipmentName=req.body.equipmentName;
         equipment.description=req.body.description;
         equipment.price=req.body.price;
-        
-
+        equipment.equipmentImage=req.body.equipmentImage;
+    
         equipment
             .save()
             .then(() => res.json("Equipment details UPDATED successfully"))

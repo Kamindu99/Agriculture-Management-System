@@ -79,7 +79,6 @@ export default class AgriPlant extends Component {
                     <input
                       id="search-input"
                       type="search"
-                      id="form1"
                       style={{width:"400px"}}
                       placeholder="Search Plant"
                       onChange={this.handleSearchArea}
@@ -108,7 +107,7 @@ export default class AgriPlant extends Component {
                 <div class="card-sl">
                     <div class="card-image">
                         <img
-                           style={{height:"150px",width:"100%"}} src={`/uploads/${eq.plantImage}`}/>
+                           style={{height:"150px",width:"100%"}} src={`${eq.plantImage}`}/>
                     </div>
 
                     <a class="card-action planta" href="#"><i class="fa fa-heart"></i></a>

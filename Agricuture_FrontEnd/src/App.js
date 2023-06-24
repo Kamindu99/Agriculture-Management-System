@@ -28,6 +28,7 @@ import EditAgriPlant from './components/Plant/EditAgriPlant';
 import EditAgriFertilizer from './components/Fertilizer/EditAgriFertilizer';
 
 import {BrowserRouter as Router, Route} from "react-router-dom"
+import Services from './components/Services';
 
 function App() {
   return (
@@ -61,6 +62,7 @@ function App() {
       <Route path="/test" exact component = {FormExample}></Route>
       <Route path="/contactus" exact component = {ContactUs}></Route>
       <Route path="/feedback" exact component = {FeedBack}></Route>
+      <Route path="/services" exact component = {Services}></Route>
     </div>
     </Router>
     

@@ -1,26 +1,13 @@
 const express = require('express');
 const AgriFertilizer = require('../models/AgriFertilizer');
-const multer = require("multer")
 const router =express.Router();
 
-const storage=multer.diskStorage({
-    destination:(req,file,callback)=>{
-        callback(null,"../Agricuture_FrontEnd/public/uploads");
-    },
-    filename:(req,file,callback)=>{
-        callback(null,file.originalname);
-    }
-})
-
-const upload=multer({storage:storage});
-
-
-router.post('/admin/add', upload.single("fertilizerImage") ,(req,res)=>{
+router.post('/admin/add' ,(req,res)=>{
     const newFertilizer=new AgriFertilizer({
         fertilizerName:req.body.fertilizerName,
         description:req.body.description,
         price:req.body.price,
-        fertilizerImage:req.file.originalname,
+        fertilizerImage:req.body.fertilizerImage
     });
     newFertilizer
     .save()
@@ -56,14 +43,14 @@ router.get('/admin/:id',(req,res)=>{
     });
 });
 
-router.put('/admin/update/:id' , upload.single("fertilizerImage"),(req,res)=>{
+router.put('/admin/update/:id' ,(req,res)=>{
     AgriFertilizer.findByIdAndUpdate(req.params.id)
     .then((fertilizer )=> {
         fertilizer.fertilizerName=req.body.fertilizerName;
         fertilizer.description=req.body.description;
         fertilizer.price=req.body.price;
+        fertilizer.fertilizerImage=req.body.fertilizerImage;
         
-
         fertilizer
             .save()
             .then(() => res.json("Fertilizer details UPDATED successfully"))

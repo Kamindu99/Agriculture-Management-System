@@ -76,7 +76,6 @@ export default class AgriEquipment extends Component {
                     <input
                       id="search-input"
                       type="search"
-                      id="form1"
                       style={{width:"400px"}}
                       placeholder="Search Equipment"
                       onChange={this.handleSearchArea}
@@ -101,7 +100,7 @@ export default class AgriEquipment extends Component {
         <Row xs={1} md={1} className="g-4" id="by" class="rounded">
                 {this.state.equipments.map((eq, idx) => (
             <div class="row p-2 bg-white border rounded " style={{background:"#e0e0d1",marginTop:"30px"}}>
-                <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" style={{height:'130px',marginTop:"14px"}} src={`/uploads/${eq.equipmentImage}`}/></div>
+                <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" style={{height:'130px',marginTop:"14px"}} src={`${eq.equipmentImage}`}/></div>
                 <div class="col-md-6 mt-1">
                     <h5>{idx + 1}. &nbsp;{eq.equipmentName}</h5>
                     <div class="d-flex flex-row">

@@ -76,7 +76,6 @@ export default class AgriFertilizer extends Component {
                     <input
                       id="search-input"
                       type="search"
-                      id="form1"
                       style={{width:"400px"}}
                       placeholder="Search Fertilizer"
                       onChange={this.handleSearchArea}
@@ -100,7 +99,7 @@ export default class AgriFertilizer extends Component {
                 {this.state.fertilizers.map((fertilizer, idx) => (
 <div class="col-md-4">
          <div class="card">
-            <img class="card-img-top" style={{width:"100%",height:"200px"}} src={`/uploads/${fertilizer.fertilizerImage}`}  alt="Card image cap"/>
+            <img class="card-img-top" style={{width:"100%",height:"200px"}} src={`${fertilizer.fertilizerImage}`}  alt="Card image cap"/>
             <div class="card-body">
                <h5 class="card-title border-bottom pb-3">{idx + 1}. &nbsp;{fertilizer.fertilizerName}<a  class="float-right d-inline-flex share"><i class="fas fa-share-alt text-primary"></i></a></h5>
                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>

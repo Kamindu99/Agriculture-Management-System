@@ -77,7 +77,6 @@ export default class AgroChemical extends Component {
                     <input
                       id="search-input"
                       type="search"
-                      id="form1"
                       style={{width:"400px"}}
                       placeholder="Search Agrochemical"
                       onChange={this.handleSearchArea}
@@ -106,9 +105,9 @@ export default class AgroChemical extends Component {
       <div class="col-md-6 col-lg-12 pb-3">
 
         <div class="card card-custom bg-white border-white border-0">
-          <div class="card-custom-img" ><img style={{height:"200px",width:"100%"}} src={`/uploads/${eq.agrochemicalImage}`}/></div>
+          <div class="card-custom-img" ><img style={{height:"200px",width:"100%"}} src={`${eq.agrochemicalImage}`}/></div>
           <div class="card-custom-avatar">
-            <img class="img-fluid" src={`/uploads/${eq.agrochemicalImage}`}alt="Avatar" />
+            <img class="img-fluid" src={`${eq.agrochemicalImage}`}alt="Avatar" />
           </div>
           <div class="card-body" style={{overflowY: "auto"}}>
             <h4 class="card-title">{idx + 1}. &nbsp;{eq.agrochemicalName}</h4>
