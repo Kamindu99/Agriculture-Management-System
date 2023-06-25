@@ -53,6 +53,10 @@ export default class AgriSeed extends Component {
         this.filterData(res.data.existingSeed, searchkey);
         this.setState({ isLoading: false });
       }
+    })
+    .catch((error) => {
+      console.log(error);
+      this.setState({ isLoading: false });
     });
   };
 

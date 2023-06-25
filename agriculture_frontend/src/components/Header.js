@@ -41,7 +41,9 @@ const Homepage = () => {
         </header>
         <nav class="navbar navbar-expand-lg navbar-dark mx-background-top-linear">
           <div class="container">
-            <a class="navbar-brand" href="index.html" style={{ textTransform: "uppercase" }}>Green World Agriculture (pvt)</a>
+            <a class="navbar-brand" href="index.html" style={{ textTransform: "uppercase" }}>
+            <img style={{ width: '70px', height: '50px',marginRight:'10px',marginTop:'-3%',marginBottom:'-2%' }} src={`https://www.pngmart.com/files/22/Plant-PNG-Isolated-File.png`} />
+              Green World Agriculture (pvt)</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -98,46 +100,56 @@ const Homepage = () => {
           <li class="header">Items</li>
           <li class={` ${isSeed ? 'activebar' : ''}`}>
             <a href="/agriseed/all">
-              <i class="fa fa-users" aria-hidden="true"></i> Seeds
+              <i class="fa fa-shopping-basket" aria-hidden="true"></i> Seeds
             </a>
           </li>
           <li class={` ${isPlant ? 'activebar' : ''}`}>
             <a href="/agriplant/all">
-              <i class="fa fa-cog" aria-hidden="true"></i> Plants
+              <i class="fa fa-pagelines" aria-hidden="true"></i> Plants
             </a>
           </li>
-          <li class={` ${isFood ? 'activebar' : ''}`}>
+          {/* <li class={` ${isFood ? 'activebar' : ''}`}>
             <a href="#">
-              <i class="fa fa-info-circle" aria-hidden="true"></i> Foods
+              <i class="fa fa-apple" aria-hidden="true"></i> Foods
             </a>
-          </li>
-          <li class="header">Services</li>
+          </li> */}
           <li class={` ${isEquipment ? 'activebar' : ''}`}>
             <a href="/agriequipment/all">
-              <i class="fa fa-users" aria-hidden="true"></i> Equipment
+              <i class="fa fa-gavel" aria-hidden="true"></i> Equipments
             </a>
           </li>
           <li class={` ${isFertilizer ? 'activebar' : ''}`}>
             <a href="/agrifertilizer/all">
-              <i class="fa fa-cog" aria-hidden="true"></i> Fertilizer
+              <i class="fa fa-sign-language" aria-hidden="true"></i> Fertilizer
             </a>
           </li>
           <li class={` ${isAgroChemicle ? 'activebar' : ''}`}>
             <a href="/agrochemical/all">
-              <i class="fa fa-info-circle" aria-hidden="true"></i> Agro Chemical
+              <i class="fa fa-fire-extinguisher" aria-hidden="true"></i> Agro Chemical
+            </a>
+          </li>
+          <li class="header">Services</li>
+          <li >
+            <a href="#">
+              <i class="fa fa-gavel" aria-hidden="true"></i> Blogs
+            </a>
+          </li>
+          <li >
+            <a href="#">
+              <i class="fa fa-sign-language" aria-hidden="true"></i> Documents
             </a>
           </li>
 
           <li class="header">For You</li>
           <li class={` ${isAboutUs ? 'activebar' : ''}`}>
             <a href="/aboutus">
-              <i class="fa fa-tachometer" aria-hidden="true"></i> About Us
+              <i class="fa fa-handshake-o " aria-hidden="true"></i> About Us
             </a>
           </li>
 
           <li class={` ${isContactUs ? 'activebar' : ''}`}>
             <a href="/contactus">
-              <i class="fa fa-tachometer" aria-hidden="true"></i> Contact Us
+              <i class="fa fa-comments-o " aria-hidden="true"></i> Contact Us
             </a>
           </li>
 

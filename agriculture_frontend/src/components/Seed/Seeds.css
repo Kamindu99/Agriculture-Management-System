@@ -1,4 +1,3 @@
-
 .seedshomecss {
     margin-left: 20px;
     margin-right: 20px;
@@ -67,71 +66,72 @@
     transition: 1.5s ease;
     height: 70%;
 }
-.seedshomecss .btnhver{
+
+.seedshomecss .btnhver {
     position: absolute;
     bottom: 0;
     width: 90%;
     opacity: 0;
     margin-bottom: 10px;
- }
- 
-.seedshomecss .card:hover .btnhver{
+}
+
+.seedshomecss .card:hover .btnhver {
     transition: 1.5s ease;
-   opacity: 1;
+    opacity: 1;
 }
 
 
-.seedshomecsscard{
+.seedshomecsscard {
     margin-top: -3%;
 }
 
-.searchbarnew{
+.searchbarnew {}
 
-}
-
-.searchbarnew .form{
+.searchbarnew .form {
 
     position: relative;
 }
 
-.searchbarnew .form .fa-search{
+.searchbarnew .form .fa-search {
 
     position: absolute;
-    top:20px;
+    top: 16px;
     left: 20px;
     color: #9ca3af;
 
 }
 
-.searchbarnew .form span{
+.searchbarnew .form span {
 
-        position: absolute;
+    position: absolute;
     right: 17px;
-    top: 13px;
+    top: 8px;
     padding: 2px;
     border-left: 1px solid #d1d5db;
 
 }
 
-.searchbarnew .left-pan{
+.searchbarnew .left-pan {
     padding-left: 7px;
 }
 
-.searchbarnew .left-pan i{
-   
-   padding-left: 10px;
+.searchbarnew .left-pan i {
+
+    padding-left: 10px;
 }
 
-.searchbarnew .form-input{
+.searchbarnew .form-input {
 
-    height: 55px;
+    height: 45px;
     text-indent: 33px;
     border-radius: 10px;
     width: 300px;
+    
 }
 
-.searchbarnew .form-input:focus{
-
+.searchbarnew .form-input:focus {
+    width: 400px;
     box-shadow: none;
-    border:none;
+    border: none;
+    transition:  0.3s ease;
 }
