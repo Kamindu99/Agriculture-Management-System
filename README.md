@@ -31,7 +31,6 @@ This is an Agriculture Management System developed using React.js as the fronten
 
 git clone https://github.com/Kamindu99/Agriculture-Management-System
 
-
 2. Install dependencies:
 
 cd your-repo
