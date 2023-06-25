@@ -58,7 +58,7 @@ const Homepage = () => {
 
 
 
-        <div class="container homepagecss">
+        <div class="container homepagecss" style={{display:"none"}}>
           <div class="row ">
             <div class="col-lg-4">
               <div class="card card-margin">
@@ -154,7 +154,7 @@ const Homepage = () => {
 
 
 
-        <div class="container mynewcss">
+        <div class="container mynewcss" style={{display:"none"}}>
           <div class="d-lg-flex">
             <div class="d-md-flex align-items-center mb-lg-0 mb-md-5">
               <div class="col1 me-md-4 mb-md-0 mb-5">
@@ -209,7 +209,7 @@ const Homepage = () => {
 
 
 
-        <div className="hoverdddd">
+        <div className="hoverdddd" style={{display:"none"}}>
           <div class="card">
             <div class="wrapper">
               <img src="https://res.cloudinary.com/dmfljlyu1/image/upload/v1687031468/myprof_t8slio.png" class="cover-image" />
