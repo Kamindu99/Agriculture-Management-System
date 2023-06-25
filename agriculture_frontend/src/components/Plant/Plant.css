@@ -1,0 +1,77 @@
+.plantcsss {}
+
+.plantcsss .description {
+    height: 100px;
+    overflow: hidden;
+}
+
+.plantcsss .wrap {
+    width: 100%;
+    height: 350px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.plantcsss .box {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    position: relative;
+    padding: 14px;
+    background: #fff;
+}
+
+.plantcsss .box:hover {
+    box-shadow: 5px 5px 15px 1px #b3acb3;
+    transition: 0.4s;
+    transform: scale(1.01);
+}
+
+.plantcsss .box-top {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 12px;
+    margin-bottom: 26px;
+}
+
+.plantcsss .box-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    object-position: 50% 20%;
+}
+
+.plantcsss .title-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plantcsss .box-title {
+    border-left: 3px solid var(--purple);
+    padding-left: 12px;
+}
+
+.plantcsss .user-follow-info {
+    color: hsl(0, 0%, 60%);
+}
+
+.plantcsss .button {
+    position: absolute;
+    bottom: 0;
+    padding: 6px;
+    color: #000;
+    background: transparent;
+    box-shadow: 0px 0px 0px 1px black inset;
+    transition: background 0.4s ease;
+    width: 90%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.plantcsss .button:hover {
+    background: #127312;
+    text-decoration: none;
+    color: #fff;
+}

@@ -1,0 +1,86 @@
+
+.seedshomecss {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.seedshomecss .card-wrapper {
+    margin-bottom: 30px;
+}
+
+
+.seedshomecss .card-image-title-description .card .card-img-wrapper {
+    max-height: 160px;
+}
+
+
+
+
+.seedshomecss .card {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    width: 100%;
+}
+
+.seedshomecss .card:hover {
+    box-shadow: 8px 12px 31px -10px #ab98ab;
+}
+
+.seedshomecss .card-img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    overflow: hidden;
+}
+
+.seedshomecss .card-img-wrapper img {
+    transition: 1.5s ease;
+}
+
+.seedshomecss .card:hover .card-img-wrapper img {
+    transform: scale(1.15);
+}
+
+.seedshomecss .card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background-color: #fff;
+    transition: 1.5s ease;
+}
+
+.seedshomecss .card-content {
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+    transition: 1.5s ease;
+}
+
+.seedshomecss .card:hover .card-body {
+    transition: 1.5s ease;
+    height: 70%;
+}
+.seedshomecss .btnhver{
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    opacity: 0;
+    margin-bottom: 10px;
+ }
+ 
+.seedshomecss .card:hover .btnhver{
+    transition: 1.5s ease;
+   opacity: 1;
+}
+
+
+.seedshomecsscard{
+    margin-top: -3%;
+}
