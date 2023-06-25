@@ -84,3 +84,54 @@
 .seedshomecsscard{
     margin-top: -3%;
 }
+
+.searchbarnew{
+
+}
+
+.searchbarnew .form{
+
+    position: relative;
+}
+
+.searchbarnew .form .fa-search{
+
+    position: absolute;
+    top:20px;
+    left: 20px;
+    color: #9ca3af;
+
+}
+
+.searchbarnew .form span{
+
+        position: absolute;
+    right: 17px;
+    top: 13px;
+    padding: 2px;
+    border-left: 1px solid #d1d5db;
+
+}
+
+.searchbarnew .left-pan{
+    padding-left: 7px;
+}
+
+.searchbarnew .left-pan i{
+   
+   padding-left: 10px;
+}
+
+.searchbarnew .form-input{
+
+    height: 55px;
+    text-indent: 33px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.searchbarnew .form-input:focus{
+
+    box-shadow: none;
+    border:none;
+}
