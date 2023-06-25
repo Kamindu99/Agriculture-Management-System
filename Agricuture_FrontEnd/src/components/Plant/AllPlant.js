@@ -18,7 +18,7 @@ export default class AgriPlant extends Component {
   }
 
   retrievePlant() {
-    axios.get("http://localhost:8000/agriplant").then((res) => {
+    axios.get("https://agribackend.onrender.com/agriplant").then((res) => {
       if (res.data.success) {
         this.setState({
           plants: res.data.existingPlant,
@@ -40,7 +40,7 @@ export default class AgriPlant extends Component {
   handleSearchArea = (e) => {
     const searchkey = e.currentTarget.value;
 
-    axios.get("http://localhost:8000/agriplant").then((res) => {
+    axios.get("https://agribackend.onrender.com/agriplant").then((res) => {
       if (res.data.success) {
         this.filterData(res.data.existingPlant, searchkey);
       }

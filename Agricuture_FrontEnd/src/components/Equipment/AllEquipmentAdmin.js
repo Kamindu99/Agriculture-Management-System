@@ -16,7 +16,7 @@ export default class AllEquipmentAdmin extends Component {
       }
     
       retrieveEquipment() {
-        axios.get("http://localhost:8000/agriequipment").then((res) => {
+        axios.get("https://agribackend.onrender.com/agriequipment").then((res) => {
           if (res.data.success) {
             this.setState({
               equipments: res.data.existingEquipment,
@@ -38,7 +38,7 @@ export default class AllEquipmentAdmin extends Component {
       handleSearchArea = (e) => {
         const searchkey = e.currentTarget.value;
     
-        axios.get("http://localhost:8000/agriequipment").then((res) => {
+        axios.get("https://agribackend.onrender.com/agriequipment").then((res) => {
           if (res.data.success) {
             this.filterData(res.data.existingEquipment, searchkey);
           }
@@ -47,7 +47,7 @@ export default class AllEquipmentAdmin extends Component {
 
       onDelete = (id) =>{
         if(window.confirm("Confirm Delete")){
-              axios.delete(`http://localhost:8000/agriequipment/admin/delete/${id}`).then((res)=>{
+              axios.delete(`https://agribackend.onrender.com/agriequipment/admin/delete/${id}`).then((res)=>{
       
               alert("success Deleted");
               this.retrieveEquipment();

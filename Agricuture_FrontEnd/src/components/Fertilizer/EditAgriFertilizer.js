@@ -43,7 +43,7 @@ else{
        
    
        axios
-       .put(`http://localhost:8000/agrifertilizer/admin/update/${id}`,formData)
+       .put(`https://agribackend.onrender.com/agrifertilizer/admin/update/${id}`,formData)
        .then(
         (res)=>setMessage(res.data))
         
@@ -59,7 +59,7 @@ else{
    useEffect(() => {
     axios
       .get(
-        `http://localhost:8000/agrifertilizer/admin/${id}`
+        `https://agribackend.onrender.com/agrifertilizer/admin/${id}`
       )
       .then((res) =>
        [

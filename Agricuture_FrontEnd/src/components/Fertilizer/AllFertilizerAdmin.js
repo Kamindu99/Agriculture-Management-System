@@ -16,7 +16,7 @@ export default class AllFertilizerAdmin extends Component {
       }
     
       retrievefertilizer() {
-        axios.get("http://localhost:8000/agrifertilizer").then((res) => {
+        axios.get("https://agribackend.onrender.com/agrifertilizer").then((res) => {
           if (res.data.success) {
             this.setState({
               fertilizers: res.data.existingFertilizer,
@@ -38,7 +38,7 @@ export default class AllFertilizerAdmin extends Component {
       handleSearchArea = (e) => {
         const searchkey = e.currentTarget.value;
     
-        axios.get("http://localhost:8000/agrifertilizer").then((res) => {
+        axios.get("https://agribackend.onrender.com/agrifertilizer").then((res) => {
           if (res.data.success) {
             this.filterData(res.data.existingFertilizer, searchkey);
           }
@@ -47,7 +47,7 @@ export default class AllFertilizerAdmin extends Component {
 
       onDelete = (id) =>{
         if(window.confirm("Confirm Delete")){
-              axios.delete(`http://localhost:8000/agrifertilizer/admin/delete/${id}`).then((res)=>{
+              axios.delete(`https://agribackend.onrender.com/agrifertilizer/admin/delete/${id}`).then((res)=>{
       
               alert("success Deleted");
               this.retrievefertilizer();

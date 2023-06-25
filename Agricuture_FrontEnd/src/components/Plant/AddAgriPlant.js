@@ -33,7 +33,7 @@ else{
         }
    
        axios
-       .post("http://localhost:8000/agriplant/admin/add",plantDetails)
+       .post("https://agribackend.onrender.com/agriplant/admin/add",plantDetails)
        .then(
         (res)=>setMessage(res.data))
         

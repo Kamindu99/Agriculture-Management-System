@@ -18,7 +18,7 @@ export default class AgriEquipment extends Component {
       }
     
       retrieveEquipment() {
-        axios.get("http://localhost:8000/agriequipment").then((res) => {
+        axios.get("https://agribackend.onrender.com/agriequipment").then((res) => {
           if (res.data.success) {
             this.setState({
               equipments: res.data.existingEquipment,
@@ -40,7 +40,7 @@ export default class AgriEquipment extends Component {
       handleSearchArea = (e) => {
         const searchkey = e.currentTarget.value;
     
-        axios.get("http://localhost:8000/agriequipment").then((res) => {
+        axios.get("https://agribackend.onrender.com/agriequipment").then((res) => {
           if (res.data.success) {
             this.filterData(res.data.existingEquipment, searchkey);
           }

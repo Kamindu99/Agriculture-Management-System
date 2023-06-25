@@ -37,7 +37,7 @@ else{
        
    
        axios
-       .put(`http://localhost:8000/agrochemical/admin/update/${id}`,formData)
+       .put(`https://agribackend.onrender.com/agrochemical/admin/update/${id}`,formData)
        .then(
         (res)=>setMessage(res.data))
         
@@ -53,7 +53,7 @@ else{
    useEffect(() => {
     axios
       .get(
-        `http://localhost:8000/agrochemical/admin/${props.match.params.id}`
+        `https://agribackend.onrender.com/agrochemical/admin/${props.match.params.id}`
       )
       .then((res) =>
        [

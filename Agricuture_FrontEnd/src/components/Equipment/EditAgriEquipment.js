@@ -36,7 +36,7 @@ else{
        
    
        axios
-       .put(`http://localhost:8000/agriequipment/admin/update/${id}`,formData)
+       .put(`https://agribackend.onrender.com/agriequipment/admin/update/${id}`,formData)
        .then(
         (res)=>setMessage(res.data))
         
@@ -52,7 +52,7 @@ else{
    useEffect(() => {
     axios
       .get(
-        `http://localhost:8000/agriequipment/admin/${props.match.params.id}`
+        `https://agribackend.onrender.com/agriequipment/admin/${props.match.params.id}`
       )
       .then((res) =>
        [

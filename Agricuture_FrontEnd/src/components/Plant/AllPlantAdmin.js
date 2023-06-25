@@ -16,7 +16,7 @@ export default class AllPlantAdmin extends Component {
       }
     
       retrievePlant() {
-        axios.get("http://localhost:8000/agriplant").then((res) => {
+        axios.get("https://agribackend.onrender.com/agriplant").then((res) => {
           if (res.data.success) {
             this.setState({
               plants: res.data.existingPlant,
@@ -38,7 +38,7 @@ export default class AllPlantAdmin extends Component {
       handleSearchArea = (e) => {
         const searchkey = e.currentTarget.value;
     
-        axios.get("http://localhost:8000/agriplant").then((res) => {
+        axios.get("https://agribackend.onrender.com/agriplant").then((res) => {
           if (res.data.success) {
             this.filterData(res.data.existingPlant, searchkey);
           }
@@ -47,7 +47,7 @@ export default class AllPlantAdmin extends Component {
 
       onDelete = (id) =>{
         if(window.confirm("Confirm Delete")){
-              axios.delete(`http://localhost:8000/agriplant/admin/delete/${id}`).then((res)=>{
+              axios.delete(`https://agribackend.onrender.com/agriplant/admin/delete/${id}`).then((res)=>{
       
               alert("success Deleted");
               this.retrievePlant();

@@ -17,7 +17,7 @@ const FeedBack = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:8000/feedback/add", feedback);
+    await axios.post("https://agribackend.onrender.com/feedback/add", feedback);
     history.push("/");
     alert(" We will reply you soon");
   };

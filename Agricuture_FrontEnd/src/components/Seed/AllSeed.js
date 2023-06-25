@@ -18,7 +18,7 @@ export default class AgriSeed extends Component {
   }
 
   retrieveSeed() {
-    axios.get("http://localhost:8000/agriseed").then((res) => {
+    axios.get("https://agribackend.onrender.com/agriseed").then((res) => {
       if (res.data.success) {
         this.setState({
           seeds: res.data.existingSeed,
@@ -40,7 +40,7 @@ export default class AgriSeed extends Component {
   handleSearchArea = (e) => {
     const searchkey = e.currentTarget.value;
 
-    axios.get("http://localhost:8000/agriseed").then((res) => {
+    axios.get("https://agribackend.onrender.com/agriseed").then((res) => {
       if (res.data.success) {
         this.filterData(res.data.existingSeed, searchkey);
       }

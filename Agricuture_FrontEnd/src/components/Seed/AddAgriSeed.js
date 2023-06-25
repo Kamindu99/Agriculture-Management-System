@@ -33,7 +33,7 @@ const AddSeed = () => {
       };
 
       axios
-        .post("http://localhost:8000/agriseed/admin/add", seeds)
+        .post("https://agribackend.onrender.com/agriseed/admin/add", seeds)
         .then(
           (res) => setMessage(res.data))
 

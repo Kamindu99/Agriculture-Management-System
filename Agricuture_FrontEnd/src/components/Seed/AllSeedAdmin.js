@@ -16,7 +16,7 @@ export default class AllSeedAdmin extends Component {
       }
     
       retrieveSeed() {
-        axios.get("http://localhost:8000/agriseed").then((res) => {
+        axios.get("https://agribackend.onrender.com/agriseed").then((res) => {
           if (res.data.success) {
             this.setState({
               seeds: res.data.existingSeed,
@@ -38,7 +38,7 @@ export default class AllSeedAdmin extends Component {
       handleSearchArea = (e) => {
         const searchkey = e.currentTarget.value;
     
-        axios.get("http://localhost:8000/agriseed").then((res) => {
+        axios.get("https://agribackend.onrender.com/agriseed").then((res) => {
           if (res.data.success) {
             this.filterData(res.data.existingSeed, searchkey);
           }
@@ -47,7 +47,7 @@ export default class AllSeedAdmin extends Component {
 
       onDelete = (id) =>{
         if(window.confirm("Confirm Delete")){
-              axios.delete(`http://localhost:8000/agriseed/admin/delete/${id}`).then((res)=>{
+              axios.delete(`https://agribackend.onrender.com/agriseed/admin/delete/${id}`).then((res)=>{
       
               alert("success Deleted");
               this.retrieveSeed();

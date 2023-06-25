@@ -40,7 +40,7 @@ else{
        
    
        axios
-       .post("http://localhost:8000/agriequipment/admin/add",formData)
+       .post("https://agribackend.onrender.com/agriequipment/admin/add",formData)
        .then(
         (res)=>setMessage(res.data))
         

@@ -18,7 +18,7 @@ export default class AgriFertilizer extends Component {
       }
     
       retrievefertilizer() {
-        axios.get("http://localhost:8000/agrifertilizer").then((res) => {
+        axios.get("https://agribackend.onrender.com/agrifertilizer").then((res) => {
           if (res.data.success) {
             this.setState({
               fertilizers: res.data.existingFertilizer,
@@ -40,7 +40,7 @@ export default class AgriFertilizer extends Component {
       handleSearchArea = (e) => {
         const searchkey = e.currentTarget.value;
     
-        axios.get("http://localhost:8000/agrifertilizer").then((res) => {
+        axios.get("https://agribackend.onrender.com/agrifertilizer").then((res) => {
           if (res.data.success) {
             this.filterData(res.data.existingFertilizer, searchkey);
           }

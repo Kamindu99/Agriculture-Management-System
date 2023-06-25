@@ -18,7 +18,7 @@ export default class AgroChemical extends Component {
       }
     
       retrieveagrochemical() {
-        axios.get("http://localhost:8000/agrochemical").then((res) => {
+        axios.get("https://agribackend.onrender.com/agrochemical").then((res) => {
           if (res.data.success) {
             this.setState({
               agrochemicals: res.data.existingAgrochemical,
@@ -40,7 +40,7 @@ export default class AgroChemical extends Component {
       handleSearchArea = (e) => {
         const searchkey = e.currentTarget.value;
     
-        axios.get("http://localhost:8000/agrochemical").then((res) => {
+        axios.get("https://agribackend.onrender.com/agrochemical").then((res) => {
           if (res.data.success) {
             this.filterData(res.data.existingAgrochemical, searchkey);
           }

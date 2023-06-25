@@ -16,7 +16,7 @@ export default class AllAgroChemicalAdmin extends Component {
       }
     
       retrieveagrochemical() {
-        axios.get("http://localhost:8000/agrochemical").then((res) => {
+        axios.get("https://agribackend.onrender.com/agrochemical").then((res) => {
           if (res.data.success) {
             this.setState({
               agrochemicals: res.data.existingAgrochemical,
@@ -38,7 +38,7 @@ export default class AllAgroChemicalAdmin extends Component {
       handleSearchArea = (e) => {
         const searchkey = e.currentTarget.value;
     
-        axios.get("http://localhost:8000/agrochemical").then((res) => {
+        axios.get("https://agribackend.onrender.com/agrochemical").then((res) => {
           if (res.data.success) {
             this.filterData(res.data.existingAgrochemical, searchkey);
           }
@@ -48,7 +48,7 @@ export default class AllAgroChemicalAdmin extends Component {
 
       onDelete = (id) =>{
         if(window.confirm("Confirm Delete")){
-              axios.delete(`http://localhost:8000/agrochemical/admin/delete/${id}`).then((res)=>{
+              axios.delete(`https://agribackend.onrender.com/agrochemical/admin/delete/${id}`).then((res)=>{
       
               alert("success Deleted");
               this.retrieveagrochemical();

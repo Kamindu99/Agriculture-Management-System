@@ -16,7 +16,7 @@ const EquipmentDetails = () => {
 
   const loadEquipment = async () => {
     const res = await axios.get(
-      `http://localhost:8000/agriequipment/admin/${id}`
+      `https://agribackend.onrender.com/agriequipment/admin/${id}`
     );
     viewEquipment(res.data.equipment);
   };
