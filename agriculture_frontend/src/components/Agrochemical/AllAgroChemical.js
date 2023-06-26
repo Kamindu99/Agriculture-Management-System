@@ -146,7 +146,7 @@ export default class AgroChemical extends Component {
                     <h2>No Agro Chemicals Found</h2>
                   </div> :
                   <>
-                    <Row xs={1} md={3} className="g-4" id="by" class="rounded">
+                    <Row xs={1} md={4} className="g-4" id="by" class="rounded">
 
 
                       {this.state.agrochemicals.map((eq, idx) => (
@@ -156,15 +156,17 @@ export default class AgroChemical extends Component {
                             <div class="card card-custom bg-white border-white border-0">
                               <div class="card-custom-img" ><img style={{ height: "200px", width: "100%" }} src={`${eq.agrochemicalImage}`} /></div>
                               <div class="card-custom-avatar">
-                                <img class="img-fluid" src={`${eq.agrochemicalImage}`} alt="Avatar" />
+                                <img class="img-fluid" style={{objectFit:'cover'}} src={`${eq.agrochemicalImage}`} alt="Avatar" />
                               </div>
                               <div class="card-body" style={{ overflowY: "auto" }}>
                                 <h4 class="card-title">{idx + 1}. &nbsp;{eq.agrochemicalName}</h4>
-                                <p class="card-text">Card has minimum height set but will <a href="https://getbootstrap.com/docs/4.0/components/card/#card-decks" target="_blank">card-decks</a> to align multiple cards nicely in a row.</p>
+                                <p class="card-text  truncateeq para">
+                                  {eq.description}
+                                   </p>
                               </div>
                               <div class="card-footer" style={{ background: "inherit; border-color: inherit;" }}>
-                                <a href="#" class="btn btn-primary">Option</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="#" class="btn btn-outline-primary">Other option</a>
+                                <a href="#" class="btn btn-primary">වැඩි විස්තර</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="#" class="btn btn-outline-primary">Buy Now</a>
                               </div>
                             </div>
 
