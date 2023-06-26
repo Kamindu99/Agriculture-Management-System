@@ -131,7 +131,7 @@ export default class AgriEquipment extends Component {
             </div>
 
 
-          <div class=" mt-5 mb-5" >
+          <div class=" mb-5" >
             <div class="d-flex justify-content-center" >
               <div class="col-md-10" >
                 <Row xs={1} md={1} className="g-4" id="by" class="rounded">

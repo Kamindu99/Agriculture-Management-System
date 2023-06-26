@@ -131,7 +131,7 @@ export default class AgriFertilizer extends Component {
 
 
           <div class="container">
-            <br />
+          
             <Row xs={1} md={1} className="g-4" id="by" class="rounded">
             {this.state.isLoading ? (
                 <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "40vh" }}>
