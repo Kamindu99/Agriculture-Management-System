@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Row } from "react-bootstrap";
 import '../../styles/Equipment.css'
+import './AgroChemicle.css'
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -151,7 +152,7 @@ export default class AgroChemical extends Component {
 
                       {this.state.agrochemicals.map((eq, idx) => (
                         <div class="pt-1 ">
-                          <div class="col-md-6 col-lg-12 pb-3">
+                          <div class="col-md-6 col-lg-12 pb-3 chemiclecardhoover">
 
                             <div class="card card-custom bg-white border-white border-0">
                               <div class="card-custom-img" ><img style={{ height: "200px", width: "100%" }} src={`${eq.agrochemicalImage}`} /></div>
