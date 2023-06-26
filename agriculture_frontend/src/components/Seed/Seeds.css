@@ -126,12 +126,12 @@
     text-indent: 33px;
     border-radius: 10px;
     width: 300px;
-    
+    transition: 0.3s ease;
 }
 
 .searchbarnew .form-input:focus {
     width: 400px;
     box-shadow: none;
     border: none;
-    transition:  0.3s ease;
+   
 }

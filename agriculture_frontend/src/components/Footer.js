@@ -20,6 +20,7 @@ function Footer() {
             <center><p>
             &copy; {new Date().getFullYear()} Green World | All rights
             reserved | Terms Of Service | Privacy</p></center>
+            <center><span style={{color:'#9b9b9b'}} >Created by Kamindu Gayantha</span></center>
           </p>
        
      

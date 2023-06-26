@@ -41,8 +41,8 @@ const Homepage = () => {
         </header>
         <nav class="navbar navbar-expand-lg navbar-dark mx-background-top-linear">
           <div class="container">
-            <a class="navbar-brand" href="index.html" style={{ textTransform: "uppercase" }}>
-            <img style={{ width: '70px', height: '50px',marginRight:'10px',marginTop:'-3%',marginBottom:'-2%' }} src={`https://www.pngmart.com/files/22/Plant-PNG-Isolated-File.png`} />
+            <a class="navbar-brand" style={{ textTransform: "uppercase" }}>
+            <img style={{ width: '70px', height: '50px',marginRight:'20px',marginTop:'-3%',marginBottom:'-2%' }} src={`https://www.pngmart.com/files/22/Plant-PNG-Isolated-File.png`} />
               Green World Agriculture (pvt)</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
