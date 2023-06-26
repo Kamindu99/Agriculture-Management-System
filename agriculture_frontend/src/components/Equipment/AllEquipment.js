@@ -154,8 +154,7 @@ export default class AgriEquipment extends Component {
                         <div class="d-flex flex-row">
                           <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
                         </div>
-                        <div class="mt-1 mb-1 spec-1"><span>100% Perfect</span><span class="dot"></span><span>Light weight</span><span class="dot"></span><span>Best finish<br /></span></div>
-                       
+                        <div class="mt-1 mb-1 spec-1"><span>100% Perfect</span><span class="dot"></span><span>Light weight</span><span class="dot"></span><span>Best finish<br /></span></div>                       
                         <p class="text-justify truncateeq para mb-0">
                         {eq.description}
                           </p>
@@ -167,7 +166,7 @@ export default class AgriEquipment extends Component {
                         </div>
                         <h6 class="text-success">Free Delivery</h6>
                         <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm " type="button" >Details</button>
-                          <button class="btn btn-outline-primary btn-sm mt-2" type="button"><a href={`/agriequipment/details/${eq._id}`}>Add to wishlist</a></button></div>
+                          <button class="btn btn-outline-primary btn-sm mt-2" type="button"><a href={`/agriequipment/details/${eq._id}`}>Buy Now</a></button></div>
                       </div>
                     </div>
                   ))}
@@ -175,12 +174,10 @@ export default class AgriEquipment extends Component {
                 }
                 </>}
                 </Row>
-
-
+                
               </div>
             </div>
           </div>
-
 
           <br /><br />
         </div>

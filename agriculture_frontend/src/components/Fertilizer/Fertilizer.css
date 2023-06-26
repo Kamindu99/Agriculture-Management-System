@@ -1,0 +1,7 @@
+.cardfhoover {}
+
+.cardfhoover .card:hover {
+    box-shadow: 0 8px 6px 0 rgba(0, 0, 0, 0.2);
+    transform: scale(1.01);
+    transition: 0.3s;
+}

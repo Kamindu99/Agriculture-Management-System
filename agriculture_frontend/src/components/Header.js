@@ -105,7 +105,7 @@ const Homepage = () => {
           </li>
           <li class={` ${isPlant ? 'activebar' : ''}`}>
             <a href="/agriplant/all">
-              <i class="fa fa-pagelines" aria-hidden="true"></i> Plants
+              <i class="fa fa-tree  ms-1" style={{marginRight:'12px'}} aria-hidden="true"></i> Plants
             </a>
           </li>
           {/* <li class={` ${isFood ? 'activebar' : ''}`}>
@@ -115,7 +115,7 @@ const Homepage = () => {
           </li> */}
           <li class={` ${isEquipment ? 'activebar' : ''}`}>
             <a href="/agriequipment/all">
-              <i class="fa fa-gavel" aria-hidden="true"></i> Equipments
+              <i class="fa fa-map-signs" aria-hidden="true"></i> Equipments
             </a>
           </li>
           <li class={` ${isFertilizer ? 'activebar' : ''}`}>
@@ -131,7 +131,7 @@ const Homepage = () => {
           <li class="header">Services</li>
           <li >
             <a href="#">
-              <i class="fa fa-gavel" aria-hidden="true"></i> Blogs
+              <i class="fa fa-book" aria-hidden="true"></i> Blogs
             </a>
           </li>
           <li >
