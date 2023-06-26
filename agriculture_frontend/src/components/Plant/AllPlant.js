@@ -139,7 +139,7 @@ export default class AgriPlant extends Component {
                   <h2>No Plants Found</h2>
                 </div> : 
                 <>
-            <Row xs={1} md={4} className="g-4" id="by" class="rounded">
+            <Row xs={1} md={4} className="g-4 rounded ms-1 me-1" id="by">
               {this.state.plants.map((eq, idx) => (
                 <div >
                   <div class="col-md-! plantcsss">

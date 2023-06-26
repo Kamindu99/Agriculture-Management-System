@@ -3,24 +3,42 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 import Header from './Header';
 import Footer from './Footer';
-
+import emailjs from 'emailjs-com';
 const ContactUs = () => {
-  let history = useHistory();
 
-  const [contactus, addContactus] = useState({
-    name: "",
-    message: "",
-  });
-  const { name, message } = contactus;
-  const onInputChange = (e) => {
-    addContactus({ ...contactus, [e.target.name]: e.target.value });
-  };
-
-  const onSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    await axios.post("https://agribackend.onrender.com/contactus/add", contactus);
-    history.push("/");
-    alert(" We will reply you soon");
+
+    // Your EmailJS service ID, template ID, and user ID
+    const serviceID = 'service_enqwz5g';
+    const templateID = 'template_uo5wmtr';
+    const userID = '2ZDkcLHfPtIIlKu3V';
+
+    // Replace with the actual email field values
+    const name = e.target.elements.name.value;
+    const email = e.target.elements.email.value;
+    const subject = e.target.elements.subject.value;
+    const message = e.target.elements.message.value;
+
+    // Send the email
+    emailjs.send(serviceID, templateID, {
+      from_name: name,
+      from_email: email,
+      subject: subject,
+      message: message,
+    }, userID)
+      .then((response) => {
+        console.log('Email sent successfully!', response.status, response.text);
+        alert('Email sent successfully!');
+        // Reset the form here if needed
+        e.target.elements.name.value=''
+        e.target.elements.email.value=''
+        e.target.elements.subject.value=''
+        e.target.elements.message.value=''
+      })
+      .catch((error) => {
+        console.error('Email sending failed:', error);
+      });
   };
 
   return (
@@ -29,61 +47,81 @@ const ContactUs = () => {
       <div className="pagemargin">
         <div className="">
           <div class="container">
-            <div class="row">
-              <div class="col-lg-3 col-md-2"></div>
-              <div class="col-lg-6 col-md-8 login-box">
-                <div class="col-lg-12 login-key">
-                  <i class="fa fa-envelope" aria-hidden="true"></i>
-                </div>
-                <div class="col-lg-12 login-title">CONTACT US</div>
+         
+         <br/>
+          <br/>
+          <br/>
+          <div class="container">
 
-                <div class="col-lg-12 login-form">
-                  <div class="col-lg-12 login-form">
-                    <form onSubmit={(e) => onSubmit(e)}>
-                      <div class="form-group" id="form-groupabc">
-                        <label class="form-control-label">YOUR NAME</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="inputabc"
-                          placeholder="Enter your Name"
-                          name="name"
-                          value={name}
-                          onChange={(e) => onInputChange(e)}
-                        />
-                      </div>
-                      <div class="form-group" id="form-groupabc">
-                        <label class="form-control-label">MESSAGE</label>
+<div class="row justify-content-center ">
+  <div class="col-12 col-md-8 col-lg-6 pb-5 ">
 
-                        <textarea
-                          class="form-control"
-                          id="inputabc"
-                          rows="6"
-                          placeholder="Enter your Message"
-                          name="message"
-                          value={message}
-                          onChange={(e) => onInputChange(e)}
-                        ></textarea>
-                      </div>
 
-                      <div class="col-lg-12 loginbttm">
-                        <div class="col-lg-6 login-btm login-text"></div>
-                        <div class="col-lg-6 login-btm login-button">
-                          <button type="submit" class="btn btn-outline-primary">
-                            SEND
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-2"></div>
+
+    <form onSubmit={handleSubmit}>
+      <div class="card border-dark rounded-0">
+        <div class="card-header p-0">
+          <div class="bg-dark text-white text-center py-2">
+            <h3><i class="fa fa-envelope me-2"></i>Contact Us</h3>
+            <p class="m-0">
+              Please fill the form and send us
+            </p>
+          </div>
+        </div>
+        <div class="card-body p-3 p-5">
+
+
+          <div class="form-group ">
+            <div class="input-group mb-4">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fa fa-user text-dark"></i></div>
               </div>
+              <input type="text" class="form-control" id="nombre" name="name" placeholder="Enter Your Name" required />
             </div>
+          </div>
 
-            <br />
-            <br />
-            <br />
+          <div class="form-group">
+            <div class="input-group mb-4">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fa fa-envelope text-dark"></i></div>
+              </div>
+              <input type="email" class="form-control" id="nombre" name="email" placeholder="Enter your Email Address" required />
+            </div>
+          </div>
+
+          <div class="form-group ">
+            <div class="input-group mb-4">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fa fa-commenting  text-dark"></i></div>
+              </div>
+              <input type="text" class="form-control" id="nombre" name="subject" placeholder="Enter Subject" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group mb-5">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fa fa-comment text-dark"></i></div>
+              </div>
+              <textarea rows={5} name="message" class="form-control" placeholder="Enter your Message" required></textarea>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <input type="submit" value="Send Mail" class="btn btn-dark btn-block rounded-0 py-2" />
+          </div>
+        </div>
+
+      </div>
+    </form>
+
+
+  </div>
+</div>
+</div>
+
+          
+     
           </div>
         </div>
       </div>

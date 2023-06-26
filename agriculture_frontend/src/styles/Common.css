@@ -1,0 +1,218 @@
+.feedbackformcss {}
+
+.feedbackformcss .contact-form {
+    background: #fff;
+    width: 70%;
+}
+
+.feedbackformcss .contact-form .form-control {
+    border-radius: 1rem;
+}
+
+.feedbackformcss .contact-image {
+    text-align: center;
+}
+
+.feedbackformcss .contact-image img {
+    border-radius: 6rem;
+    width: 11%;
+    margin-top: -3%;
+    transform: rotate(29deg);
+}
+
+.feedbackformcss .contact-form form {
+    padding: 14%;
+}
+
+.feedbackformcss .contact-form form .row {
+    margin-bottom: -7%;
+}
+
+.feedbackformcss .contact-form h3 {
+    margin-bottom: 8%;
+    margin-top: -10%;
+    text-align: center;
+    color: #0062cc;
+}
+
+.feedbackformcss .contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #dc3545;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+
+.feedbackformcss .btnContactSubmit {
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #0062cc;
+    border: none;
+    cursor: pointer;
+}
+
+
+/*blogs css*/
+.mynewblogs {}
+
+.mynewblogs .container {
+    max-width: 950px;
+}
+
+.mynewblogs .card {
+    border-radius: 1rem;
+    box-shadow: 0px -10px 0px rgb(151, 248, 6);
+    margin-bottom: 40px;
+}
+
+@media(max-width:767px) {
+    .mynewblogs .card {
+        margin: 1rem 0.7rem 1rem;
+        max-width: 80vw;
+    }
+}
+
+.mynewblogs img {
+    width: 5.2rem;
+    border-radius: 5rem;
+    margin: 1.3rem auto 1rem auto;
+}
+
+.mynewblogs .col-md-4 {
+    padding: 0 0.5rem;
+}
+
+.mynewblogs .card-title {
+    font-size: 1rem;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-family: 'IM Fell French Canon SC';
+}
+
+.mynewblogs .card-text {
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+    color: rgb(82, 81, 81);
+    line-height: 1.4rem;
+}
+
+.mynewblogs .footer {
+    border-top: none;
+    text-align: center;
+    line-height: 1.2rem;
+    padding: 1rem 0 1.4rem 0;
+    font-family: 'Varela Round';
+}
+
+.mynewblogs #name {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: rgba(120, 143, 86, 0.678);
+}
+
+.mynewblogs #position {
+    font-size: 0.7rem;
+    color: rgba(82, 82, 82, 0.425);
+}
+
+.mynewblogs a {
+    color: rgb(151, 248, 6);
+    font-weight: bold;
+}
+
+.mynewblogs a:hover {
+    color: rgb(151, 248, 6);
+}
+
+.mynewblogs .row.align-items-stretch [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+}
+
+.mynewblogs .row.align-items-stretch [class*="col-"] .card {
+    flex-grow: 1;
+}
+
+/*blogs css*/
+
+/* documents css */
+
+.documentpagecss {
+}
+
+.documentpagecss h6, span {
+    color: #ebe8f0;
+}
+
+.documentpagecss .list-group {
+    width: 65% !important;
+}
+
+.documentpagecss .list-group-item {
+    margin-bottom: 40px;
+    border-radius: none;
+    background: linear-gradient(to right, #294932ab, #03886075);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.documentpagecss .list-group-item:hover {
+    transform: scaleX(1.05);
+}
+
+
+.documentpagecss .about span {
+    font-size: 12px;
+    margin-right: 10px;
+
+}
+
+.documentpagecss input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+}
+
+.documentpagecss input[type=checkbox]:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0px;
+    left: 0;
+    border: 1px solid #10a3f9;
+    border-radius: 3px;
+    background-color: white;
+
+}
+
+.documentpagecss input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 12px;
+    border: solid #007bff;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 6px;
+}
+
+.documentpagecss input[type="checkbox"]:checked+.check {
+    opacity: 1;
+}
+.documentpagecss li i{
+    color: #c76e32ce;
+}
+
+/* documents css */

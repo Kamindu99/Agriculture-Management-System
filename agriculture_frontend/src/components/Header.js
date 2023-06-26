@@ -15,6 +15,10 @@ const Homepage = () => {
   const isAgroChemicle = str.includes('/agrochemical');
   const isAboutUs = str.includes('/aboutus');
   const isContactUs = str.includes('/contactus');
+  const isFeedback = str.includes('/feedback');
+  const isServices = str.includes('/services');
+  const isblogs = str.includes('/blogs');
+  const isDocuments = str.includes('/documents');
 
   return (
     <div>
@@ -51,34 +55,30 @@ const Homepage = () => {
 
               <ul class="navbar-nav ml-auto">
 
-                <li class="nav-item active">
+                <li class={`nav-item ${isHome ? 'active' : ''}`}>
                   <a class="nav-link" href="/">Home
                     <span class="sr-only">(current)</span>
                   </a>
                 </li>
 
-                <li class="nav-item">
+                <li class={`nav-item ${isAboutUs ? 'active' : ''}`}>
                   <a class="nav-link" href="/aboutus">About Us</a>
                 </li>
 
-                <li class="nav-item">
+                <li class={`nav-item ${isFeedback ? 'active' : ''}`}>
                   <a class="nav-link" href="/feedback">FeedBack</a>
                 </li>
 
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Inquiry</a>
-                </li>
-
-                <li class="nav-item">
+                <li class={`nav-item ${isServices ? 'active' : ''}`}>
                   <a class="nav-link" href="/services">Services</a>
                 </li>
 
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Blog</a>
+                <li class={`nav-item ${isblogs ? 'active' : ''}`}>
+                  <a class="nav-link" href="/blogs">Blog</a>
                 </li>
 
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Conmany</a>
+                <li class={`nav-item ${isContactUs ? 'active' : ''}`}>
+                  <a class="nav-link" href="/contactus">Contact Us</a>
                 </li>
               </ul>
             </div>
@@ -108,11 +108,6 @@ const Homepage = () => {
               <i class="fa fa-tree  ms-1" style={{marginRight:'12px'}} aria-hidden="true"></i> Plants
             </a>
           </li>
-          {/* <li class={` ${isFood ? 'activebar' : ''}`}>
-            <a href="#">
-              <i class="fa fa-apple" aria-hidden="true"></i> Foods
-            </a>
-          </li> */}
           <li class={` ${isEquipment ? 'activebar' : ''}`}>
             <a href="/agriequipment/all">
               <i class="fa fa-map-signs" aria-hidden="true"></i> Equipments
@@ -128,17 +123,6 @@ const Homepage = () => {
               <i class="fa fa-fire-extinguisher" aria-hidden="true"></i> Agro Chemical
             </a>
           </li>
-          <li class="header">Services</li>
-          <li >
-            <a href="#">
-              <i class="fa fa-book" aria-hidden="true"></i> Blogs
-            </a>
-          </li>
-          <li >
-            <a href="#">
-              <i class="fa fa-sign-language" aria-hidden="true"></i> Documents
-            </a>
-          </li>
 
           <li class="header">For You</li>
           <li class={` ${isAboutUs ? 'activebar' : ''}`}>
@@ -147,12 +131,34 @@ const Homepage = () => {
             </a>
           </li>
 
+          {/* <li class={` ${isServices ? 'activebar' : ''}`}>
+            <a href="/services">
+              <i class="fa fa-cogs " aria-hidden="true"></i> Services
+            </a>
+          </li> */}
+
+          <li class={` ${isFeedback ? 'activebar' : ''}`}>
+            <a href="/feedback">
+              <i class="fa fa-commenting  " aria-hidden="true"></i> FeedBack
+            </a>
+          </li>
+
           <li class={` ${isContactUs ? 'activebar' : ''}`}>
             <a href="/contactus">
               <i class="fa fa-comments-o " aria-hidden="true"></i> Contact Us
             </a>
           </li>
-
+          <li class="header">Services</li>
+          <li class={` ${isblogs ? 'activebar' : ''}`}>
+            <a href="/blogs">
+              <i class="fa fa-book" aria-hidden="true"></i> Blogs
+            </a>
+          </li>
+          <li class={` ${isDocuments ? 'activebar' : ''}`}>
+            <a href="/documents">
+              <i class="fa fa-sign-language" aria-hidden="true"></i> Documents
+            </a>
+          </li>
 
         </ul>
       </div>

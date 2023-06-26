@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 import Header from './Header';
 import Footer from './Footer';
+import '../styles/Common.css';
 const FeedBack = () => {
   let history = useHistory();
 
@@ -24,69 +25,54 @@ const FeedBack = () => {
 
   return (
     <div>
-        <Header/>
+      <Header />
       <div className="pagemargin">
         <div className="">
           <div class="container">
-            <div class="row">
-              <div class="col-lg-3 col-md-2"></div>
-              <div class="col-lg-6 col-md-8 login-box">
-                <div class="col-lg-12 login-key">
-                  <i class="fa fa-envelope" aria-hidden="true"></i>
+
+            <div className="feedbackformcss">
+              <br />
+              <br />
+              <br />
+              <div class="container contact-form">
+                <div class="contact-image">
+                  <img src="https://cdn3d.iconscout.com/3d/premium/thumb/feedback-8533318-6715454.png?f=webp" alt="rocket_contact" />
                 </div>
-                <div class="col-lg-12 login-title">FeedBack</div>
-
-                <div class="col-lg-12 login-form">
-                  <div class="col-lg-12 login-form">
-                    <form onSubmit={(e) => onSubmit(e)}>
-                      <div class="form-group" id="form-groupabc">
-                        <label class="form-control-label">YOUR NAME</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="inputabc"
-                          placeholder="Enter your Name"
-                          name="name"
-                          value={name}
-                          onChange={(e) => onInputChange(e)}
-                        />
+                <form onSubmit={(e) => onSubmit(e)}>
+                  <h3>
+                    Give us your Feedback
+                  </h3>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="text" name="name" value={name} onChange={(e) => onInputChange(e)} class="form-control" placeholder="Your Name *" />
                       </div>
-                      <div class="form-group" id="form-groupabc">
-                        <label class="form-control-label">MESSAGE</label>
-
-                        <textarea
-                          class="form-control"
-                          id="inputabc"
-                          rows="6"
-                          placeholder="Enter your Message"
-                          name="message"
-                          value={message}
-                          onChange={(e) => onInputChange(e)}
-                        ></textarea>
+                      <div class="form-group">
+                        <input type="text" name="txtEmail" class="form-control" placeholder="Your Email *" />
                       </div>
-
-                      <div class="col-lg-12 loginbttm">
-                        <div class="col-lg-6 login-btm login-text"></div>
-                        <div class="col-lg-6 login-btm login-button">
-                          <button type="submit" class="btn btn-outline-primary">
-                            SEND
-                          </button>
-                        </div>
+                      <div class="form-group">
+                        <input type="text" name="txtPhone" class="form-control" placeholder="Your Phone Number *" />
                       </div>
-                    </form>
+                      <div class="form-group">
+                        <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <textarea name="message" value={message} onChange={(e) => onInputChange(e)} class="form-control" placeholder="Your Message *" style={{ width: "100%", height: "150px" }}></textarea>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="col-lg-3 col-md-2"></div>
+                </form>
               </div>
+              <br />
+              <br />
             </div>
 
-            <br />
-            <br />
-            <br />
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

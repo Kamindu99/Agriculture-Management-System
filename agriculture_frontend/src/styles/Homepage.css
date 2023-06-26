@@ -67,11 +67,10 @@
   font-size: 15px;
   margin-top: 15px;
   margin-bottom: 20px;
+  text-align: center
 }
 
-.team-boxed .item img {
-  max-width: 160px;
-}
+
 
 .team-boxed .social {
   font-size: 18px;

@@ -132,7 +132,7 @@ export default class AgriFertilizer extends Component {
 
           <div class="container">
           
-            <Row xs={1} md={1} className="g-4" id="by" class="rounded">
+            <Row xs={1} md={1} className="g-4 ms-1 me-1 rounded" id="by" >
             {this.state.isLoading ? (
                 <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "40vh" }}>
                   <div className="spinner-border text-success" style={{ width: "100px", height: "100px", animationDuration: "1.5s" }} role="status"></div>

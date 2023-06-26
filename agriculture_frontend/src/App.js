@@ -26,9 +26,12 @@ import EditAgriEquipment from './components/Equipment/EditAgriEquipment';
 import EditAgriSeed from './components/Seed/EditAgriSeed';
 import EditAgriPlant from './components/Plant/EditAgriPlant';
 import EditAgriFertilizer from './components/Fertilizer/EditAgriFertilizer';
+import Services from './components/Services';
+import Bolgs from './components/Bolgs';
+import Documents from './components/Documents';
 
 import {BrowserRouter as Router, Route} from "react-router-dom"
-import Services from './components/Services';
+import TestPage from './components/TestPage';
 
 function App() {
   return (
@@ -59,10 +62,12 @@ function App() {
       <Route path="/admin/agrochemical/all" exact component = {AllAgroChemicalAdmin}></Route>
       <Route path="/agrochemical/edit/:id" exact component = {EditAgroChemical}></Route>
       <Route path="/plantdetails/:id" exact component = {PlantDetails}></Route>
-      <Route path="/test" exact component = {FormExample}></Route>
+      <Route path="/test" exact component = {TestPage}></Route>
       <Route path="/contactus" exact component = {ContactUs}></Route>
       <Route path="/feedback" exact component = {FeedBack}></Route>
       <Route path="/services" exact component = {Services}></Route>
+      <Route path="/blogs" exact component = {Bolgs}></Route>
+      <Route path="/documents" exact component = {Documents}></Route>
     </div>
     </Router>
     
