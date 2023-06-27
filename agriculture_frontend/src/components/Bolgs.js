@@ -7,6 +7,7 @@ function Bolgs() {
     const [blogs, setBlogs] = useState([
         {
             id: 1,
+            title:'Agriculture is the Backbone',
             blog : "Agriculture is the backbone of our economy. It provides us with food, clothing, and shelter.The main occupation of our country is agriculture. About seventy percent of our population dependson agriculture. One-third of our National income comes from agriculture. Our economy is based on agriculture. So the progress of agriculture means the progress of our economy.",
             name: "Kamindu Gayantha",
             position: "B.Sc. Agriculture",
@@ -14,6 +15,7 @@ function Bolgs() {
         },
         {
             id: 2,
+            title:'Important of Agriculture',
             blog : "Sri Lanka is an agricultural country. Most of the people in Sri Lanka are farmers. They produce various types of crops.They grow paddy, corn, chillies, vegetables, fruits and various types of grains. They sell their surplus crops and earn money.They use this money to buy their other needs. So, agriculture is very important for our economy and our life too.",
             name: "Gayantha Wangisinghe",
             position: "SE Undergraduate",
@@ -21,6 +23,7 @@ function Bolgs() {
         },
         {
             id: 3,
+            title:'Agro Chemicals',
             blog : "Agro Chemicals are the chemicals which are used in agriculture. They are used to kill pests and insects. .They are used to protect crops from diseases. They are used to increase the production of crops. They are used to increase the fertility ofthe soil. They are used to increase the quality of the crops. They are used to increase.",
             name: "Gayantha Kamindu",
             position: "CEO of Green World",
@@ -28,6 +31,7 @@ function Bolgs() {
         },
         {
             id: 4,
+            title:'Healthy Soil',
             blog : "Healthy soil is the foundation of the food system. We rely on healthy soil to grow everything from fruits and vegetables to feed for livestock. Healthysoil is essential to ensure the continued growth of crops, and the health of animals and humans. Soil is a living ecosystem, and is a farmers most preciousresource. It is the foundation of the food system and plays a critical role in feeding our planet. Soil is the basis for sustenance for 7 billion people.",
             name: "Dr. Wanigasinghe",
             position: "Dept. Agriculture",
@@ -35,6 +39,7 @@ function Bolgs() {
         },
         {
             id: 5,
+            title:'Things of Agriculture',
             blog : "Seeds, Plants, Fertilizers, and Equipments are the main things which are used in agriculture. Seeds are the primary basis for human sustenance.Plants are mainly multicellular organisms, predominantly photosynthetic. Fertilizer is any material of natural or synthetic origin that is appliedto soils or to plant tissues to supply one or more plant nutrients essential to the growth of plants. Equipments are the different types of machineryused agriculture.",
             name: "Mr. Anil Perera",
             position: "Student",
@@ -70,7 +75,7 @@ function Bolgs() {
                                     </div>
                                     <div class="card-text">
                                         <div class="card-title mb-2">
-                                            {blog.name}
+                                            {blog.title}
                                         </div>
                                         &ldquo; {blog.blog} &rdquo;
                                     </div>
